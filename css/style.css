@@ -322,6 +322,36 @@
 }
 
 
+/* extra info container */
+.extra_info_container{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+     width: 100%;
+    max-width: 100%;
+}
+
+.extra_info{
+    padding: 1.5rem;
+    word-break: break-word; /* Prevents long text from breaking layout */
+    overflow-wrap: break-word;
+    padding: 1rem;
+}
+
+.extra_info_heading{
+    padding-bottom: 30px;
+    border-bottom: var(--primary) 2px solid;
+    margin-bottom: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .extra_info_container {
+        grid-template-columns: 1fr;  /* stack on mobile */
+    }
+}
+
+
 /*** Property List ***/
 .nav-pills .nav-item .btn {
     color: var(--dark);
