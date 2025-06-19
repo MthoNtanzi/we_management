@@ -763,6 +763,28 @@ hr {
     }
 }
 
+/*** FAQs ***/
+.accordion-button {
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /*** Footer ***/
 .footer .btn.btn-social {
     margin-right: 5px;
