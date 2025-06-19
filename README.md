@@ -3,7 +3,7 @@
 ## Required Changes
 
 ### 1. Contact Page Updates
-- [ ] **Move Google Map**  
+- [✓] **Move Google Map**  
   - Relocate map section to appear within contact form page
   - Ensure responsive behavior on all devices
 
@@ -14,7 +14,7 @@
   - Test on different screen sizes
 
 ### 3. Homepage Content Additions
-- [ ] **FAQ Section**  
+- [✓] **FAQ Section**  
   - Add expandable/collapsible FAQ component on the home page
   - Style to match existing design language
 
@@ -23,7 +23,7 @@
   - Include featured image, title, and excerpt for each
 
 ### 4. Testimonials Integration
-- [ ] **Google Reviews Implementation**  
+- [✓] **Google Reviews Implementation**  
   - Add real testimonials from google
   - Create carousel display with review text, stars, and author
   - Fallback to static testimonials if API unavailable
