@@ -7,8 +7,8 @@
   - Relocate map section to appear within contact form page
   - Ensure responsive behavior on all devices
 
-### 2. Global Styling Updates
-- [ ] **Background Image Implementation**  
+### 2. Global Styling Updates (CANCELLED!!!)
+- [!] **Background Image Implementation**  
   - Apply background image across all pages on the banner to fill the whole screen, not half
   - Ensure proper overlay for content readability
   - Test on different screen sizes
@@ -18,7 +18,7 @@
   - Add expandable/collapsible FAQ component on the home page
   - Style to match existing design language
 
-- [ ] **Latest Insights Section**  
+- [✓] **Latest Insights Section**  
   - Create 3-column grid of latest blog posts/ and move the right hand menu to the bottom
   - Include featured image, title, and excerpt for each
 
@@ -43,12 +43,12 @@
     - Minimal contact info
 
 ### 6. Blog Page Restructuring
-- [ ] **Grid Layout Implementation**  
+- [✓] **Grid Layout Implementation**  
   - Convert blog listing to 3-column grid
   - Ensure consistent card sizing
   - Maintain hover effects from current design
 
-- [ ] **Sidebar Relocation**  
+- [✓] **Sidebar Relocation**  
   - Move right sidebar content to bottom of page
   - Reformat as full-width section
   - Maintain all existing functionality
