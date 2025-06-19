@@ -532,6 +532,15 @@ hr {
     color: #fff
 }
 
+#brokerage_background {
+    background-image: url('https://images.pexels.com/photos/590045/pexels-photo-590045.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff
+}
+
 #service_background::before {
     content: '';
     position: absolute;
@@ -579,6 +588,31 @@ hr {
         font-size: 25px;
         padding-inline: 50px;
     }
+}
+
+.orange-blocks-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.orange-blocks{
+    background-color: #ff8248;
+    width: 200px;
+    height: 220px;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    color: #000;
+}
+
+.orange-blocks span{
+    background-color: #EEEEEE;
+    color: #ff8248;
+    border-radius: 50%;
+}
+
+.orange-blocks p{
+    margin-block: 20px;
 }
 
 
