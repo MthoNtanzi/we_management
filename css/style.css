@@ -543,6 +543,43 @@ hr {
 }
 
 /* ==== Services ==== */
+
+
+/* === Brokerage Background ID === */
+
+#brokerage_background {
+    background-image: url('https://images.pexels.com/photos/5912321/pexels-photo-5912321.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff
+}
+
+#brokerage_background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+#brokerage_background h1,
+#brokerage_background h2,
+#brokerage_background p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    /* Text shadow for readability */
+}
+
+
+/* === Service Background ID === */
+
 #service_background {
     background-image: url('https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg');
     background-repeat: no-repeat;
@@ -552,14 +589,6 @@ hr {
     color: #fff
 }
 
-#brokerage_background {
-    background-image: url('https://images.pexels.com/photos/590045/pexels-photo-590045.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: #fff
-}
 
 #service_background::before {
     content: '';
@@ -581,6 +610,75 @@ hr {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     /* Text shadow for readability */
 }
+
+/* === Facility Background ID === */
+
+#facility_background {
+    background-image: url('https://images.pexels.com/photos/6694492/pexels-photo-6694492.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff
+}
+
+
+#facility_background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+#facility_background h1,
+#facility_background h2,
+#facility_background p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    /* Text shadow for readability */
+}
+
+
+/* === Property Care Background ID === */
+
+#property_care_background {
+    background-image: url('https://cdn.pixabay.com/photo/2017/12/21/12/09/trust-3031679_1280.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff
+}
+
+
+#property_care_background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+#property_care_background h1,
+#property_care_background h2,
+#property_care_background p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    /* Text shadow for readability */
+}
+
+
 
 .sub_services_header {
     display: flex;
