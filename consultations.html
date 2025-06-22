@@ -46,7 +46,7 @@
 
 
         <!-- Navbar Start -->
-        <div class="container nav-bar bg-transparent" style="margin-top: 0;">
+        <div class="container-fluid nav-bar bg-transparent">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
                 <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
@@ -64,7 +64,7 @@
 
                         <!-- Dropdown for service sections -->
                         <div class="nav-item dropdown">
-                            <a href="services.html" class="nav-link active dropdown-toggle" id="servicesDropdown"
+                            <a href="services.html" class="nav-link dropdown-toggle active" id="servicesDropdown"
                                 role="button">
                                 Services
                             </a>
@@ -72,7 +72,7 @@
                                 <li><a class="dropdown-item" href="property-management.html">Property Management</a>
                                 </li>
                                 <li><a class="dropdown-item" href="brokerage.html">Brokerage</a></li>
-                                <li><a class="dropdown-item" href="facility-management.html">Facility Management</a>
+                                <li><a class="dropdown-item" href="consultations.html">Consultations</a>
                                 </li>
                                 <li><a class="dropdown-item" href="we-property-care.html">WE Property Care™</a>
                                 </li>
@@ -81,24 +81,39 @@
                         <!-- Dropdown for service sections -->
 
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
                     </div>
-                    <a href="blog.html" class="btn btn-primary px-3 d-none d-lg-flex">Our Blog</a>
                 </div>
             </nav>
         </div>
         <!-- Navbar End -->
 
-        <!-- Services Header Start -->
+        <!-- Header Start -->
         <div class="container-fluid header bg-white p-0">
-            <div class="sub_services_header" id="facility_background">
-                <h1 class="display-5 animated fadeIn my-4" style="margin-top: 35px; color: var(--secondary);">
-                    Facility Management
-                </h1>
-                <p>Our facilities management services ensure your property operates smoothly and efficiently. From
-                    maintenance
-                    coordination and safety compliance to energy optimization, we handle the details to keep your
-                    facilities running
-                    at their best.</p>
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row page_header">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4">
+                        Consultations
+                    </h1>
+                    <p class="animated fadeIn mb-4 pb-2">
+                        Our consultation services provide tailored support for specific property management challenges.
+                        Whether you
+                        need help with invoicing, vendor coordination, or lease reviews, we offer flexible solutions
+                        without requiring a full
+                        management package.
+                    </p>
+
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <div class="owl-carousel header-carousel">
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Header End -->
@@ -106,9 +121,11 @@
         <!-- Content Start -->
         <div class="text-center">
             <h1>What is Facilities Management?</h1>
-            <p>Our facilities management services streamline operations for single or multi-location properties, such as offices or retail franchises. 
+            <p>Our facilities management services streamline operations for single or multi-location properties, such as
+                offices or retail franchises.
                 We serve as your central point of contact, coordinating vendors, managing
-                maintenance, and ensuring compliance, while optimizing efficiency for properties, including those under triple net (NNN)
+                maintenance, and ensuring compliance, while optimizing efficiency for properties, including those under
+                triple net (NNN)
                 leases.</p>
         </div>
 
