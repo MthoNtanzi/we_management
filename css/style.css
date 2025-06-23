@@ -795,6 +795,16 @@ hr {
 
 
 /* ==== About ==== */
+
+/* ===  Values  === */
+.ourValuesP{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: #ff8248 solid 1px;
+}
+
 /* Affiliate Partners Section */
 #founder .rounded-circle {
     height: 35px !important;
