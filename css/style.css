@@ -533,10 +533,10 @@ hr {
 
 .video_container {
     width: 100%;
-    height: 300px;
-    border-radius: 30px;
+    height: 100px;
+    background-color: #ff8248;
     overflow: hidden;
-    padding: 30px 0;
+    padding: 0 60px;
     box-sizing: border-box;
     background: #ffffff;
     /* optional: helps avoid any visual gaps */
@@ -642,6 +642,13 @@ hr {
     z-index: 2;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     /* Text shadow for readability */
+}
+
+
+/* === Consultations === */
+.individual_consutling_blocks{
+    display: flex;
+    border-bottom: 1px solid black;
 }
 
 
