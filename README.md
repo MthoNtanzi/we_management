@@ -75,3 +75,9 @@
 ## Timeline
 - Draft implementation: 3 days
 - Client review: On the 20th June 2025
+
+crew inclusion on about
+fixed spelling (her name, home)
+facility management not plural
+name: we management (spacing)
+social link fixing, only use linkedin, ig and facebook
