@@ -1261,7 +1261,7 @@ hr {
     height: 100vh;
     min-height: 700px;
     background: linear-gradient(rgba(14, 46, 80, 0.4), rgba(14, 46, 80, 0.7)),
-        url('../img/truebanner.jpg') center/cover no-repeat;
+        url('../img/building/building_5.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1284,10 +1284,7 @@ hr {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.2;
-}
-
-.hero-content h1 .text-primary {
-    color: #9926f0;
+    font-weight: 700 !important;
 }
 
 .hero-content p.lead {
