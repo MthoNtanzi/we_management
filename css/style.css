@@ -361,7 +361,7 @@
         z-index: 2;
         color: #fff;
         text-align: center;
-        background: rgba(0, 0, 0, 0.557);
+        background: rgba(0, 0, 0, 0.418);
         padding: 1.5rem;
         border-radius: 10px;
         width: 90%;
@@ -370,11 +370,12 @@
     .text-wrapper h1 {
         font-size: 1.75rem;
         font-weight: 900;
+        color: var(--primary) !important;
     }
 
     .text-wrapper p {
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .image-wrapper img {
@@ -386,6 +387,11 @@
 
     .owl-carousel .owl-nav {
         display: none !important;
+    }
+
+    .text-wrapper ol li, .text-wrapper ol li a{
+        color: #ffffff !important;
+        font-weight: 500 !important;
     }
 }
 
@@ -911,20 +917,48 @@ hr {
 .service_package_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 24px;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .service_package_box {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #f8f8f8;
+    padding: 24px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    cursor: default;
 }
 
+.service_package_box:hover {
+    box-shadow: 0 12px 30px rgba(153, 38, 240, 0.4);
+    border-color: var(--primary);
+    transform: translateY(-6px);
+}
+
+.service_package_heading {
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: 1.2px;
+}
+
+.service_package_box p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.service_package_box p.text-primary {
+    color: #9926f0;
+    font-weight: 600;
+}
 
 @media (max-width: 800px) {
     .service_package_container {
@@ -939,22 +973,43 @@ hr {
 
 /* End of service package */
 
-
 /* == Start of We Prop Care == */
-
 .we_prop_care_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
 }
 
 .we_prop_care_grid_item {
-  background-color: #f8f8f8;
-  padding: 40px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.we_prop_care_grid_item:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.we_prop_care_grid_item i {
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.we_prop_care_grid_item h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.we_prop_care_grid_item p {
+    font-size: 15px;
+    color: #666;
 }
 
 /* Responsive layout: stack all items vertically */
