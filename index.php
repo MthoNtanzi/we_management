@@ -33,132 +33,15 @@
     ?>
 
     <!-- About Start -->
-    <div class="container-xxl py-4">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/our_story/getting-business-finances-in-order.jpg">
-                    </div>
-                </div>
-
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="mb-4 text-capitalize">Who we are & why choose us</h1>
-                    <p class="mb-4">
-                        WE Management Group is a trusted leader in
-                        commercial property management and brokerage,
-                        based in Miami, Florida. With our experience, we
-                        prioritize transparency, efficiency, and client
-                        success.
-                    </p>
-                    <p class="mb-4">We pride ourselves on fostering strong tenant
-                        relationships, optimizing asset performance, and
-                        creating vibrant spaces that drive success for
-                        property owners and tenants alike. Whether you're
-                        looking to enhance your property's value, attract
-                        quality tenants, or streamline operations, we are
-                        your trusted partner in achieving your commercial
-                        real estate goals. Let us help you unlock the full
-                        potential of your assets and build thriving spaces for
-                        businesses and communities
-                    </p>
-                </div>
-            </div>
-            <div class="extra_info_container py-4">
-                <div class="extra_info">
-                    <h3 class="extra_info_heading">Local Expertise</h3>
-                    <p class="extra_info_p">Our deep understanding of the
-                        industry allows us to navigate the
-                        complexities of commercial
-                        properties with precision, ensuring
-                        seamless operations and maximum value for your
-                        investments.</p>
-                </div>
-                <div class="extra_info">
-                    <h3 class="extra_info_heading">Licensed Professionals</h3>
-                    <p class="extra_info_p">
-                        Our team holds FL Real Estate Broker certifications for trusted service. With deep knowledge
-                        of local regulations and a strong ethical commitment, we handle every transaction with
-                        professionalism and integrity.
-                    </p>
-
-
-                </div>
-                <div class="extra_info">
-                    <h3 class="extra_info_heading">Proactive Management</h3>
-                    <p class="extra_info_p">We take a collaborative and personalized approach to property
-                        management. As a boutique firm, we prioritize
-                        understanding your unique objectives and tailoring solutions to meet your specific needs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+        get_template_part('template-parts/home/section', 'about');
+    ?>
     <!-- About End -->
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="mb-3">What Our Clients Say</h1>
-                <p>We take pride in the relationships we've built. Here's what some of our clients have to say about
-                    their experience working with us - real stories from satisfied tenants, landlords, and partners.
-                </p>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item bg-light rounded p-3">
-                    <div class="bg-white border rounded p-4" style="height: 320px;">
-                        <p>Working with WE Management Group has been a game changer. Their attention to detail,
-                            communication, and commitment to excellence make them stand out in commercial real
-                            estate.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial.png"
-                                style="width: 58px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Crystal Esparza</h6>
-                                <small>Client</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light rounded p-3" style="height: 300px;">
-                    <div class="bg-white border rounded p-4">
-                        <p>Top-Tier Property Manager
-
-                            Jessica is an outstanding property manager. Professional, reliable, and always on point.
-                            Her attention to detail, clear communication, and ability to handle both tenants and
-                            property needs with ease make her a true asset in this industry. I've worked with many
-                            property managers, and Jessica stands out as one of the best. Highly recommend W.E.
-                            Management Group!!</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial.png"
-                                style="width: 58px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Fatherzup World</h6>
-                                <small>Client</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light rounded p-3" style="height: 300px;">
-                    <div class="bg-white border rounded p-4">
-                        <p>I highly recommend WE management group. Jessica was very efficient and professional she
-                            really looks out for the best interest of her clients.
-                            <br>
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial.png"
-                                style="width: 58px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Quality Health</h6>
-                                <small>Client</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+        get_template_part('template-parts/home/section', 'testimonial');
+    ?>
     <!-- Testimonial End -->
 
     <!-- Call to Action Start -->
