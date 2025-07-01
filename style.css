@@ -1468,7 +1468,7 @@ hr {
     height: 100vh;
     min-height: 700px;
     background: linear-gradient(rgba(14, 46, 80, 0.4), rgba(14, 46, 80, 0.7)),
-        url('../img/building/building_5.jpg') center/cover no-repeat;
+        url('assets/img/building/building_5.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -10,29 +10,13 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon">
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- CSS -->
+    <?php
+        wp_head();
+    ?>
+    
 </head>
 
 <body>
@@ -50,8 +34,8 @@
             <div class="container">
                 <a href="index.html" class="navbar-brand d-flex align-items-center">
                     <div class="p-2 me-2">
-                        <img class="img-fluid" src="img/logo.png" alt="WE Management Logo"
-                            style="width: 50px; height: 50px;">
+                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="WE Management Logo" style="width: 50px; height: 50px;">
+
                     </div>
                     <h1 class="m-0 text-white">WE Management</h1>
                 </a>
@@ -109,7 +93,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="img/our_story/getting-business-finances-in-order.jpg">
+                        <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/our_story/getting-business-finances-in-order.jpg">
                     </div>
                 </div>
 
@@ -183,7 +167,7 @@
                             communication, and commitment to excellence make them stand out in commercial real
                             estate.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial.png"
+                            <img class="img-fluid flex-shrink-0 rounded" src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial.png"
                                 style="width: 58px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Crystal Esparza</h6>
@@ -202,7 +186,7 @@
                             property managers, and Jessica stands out as one of the best. Highly recommend W.E.
                             Management Group!!</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial.png"
+                            <img class="img-fluid flex-shrink-0 rounded" src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial.png"
                                 style="width: 58px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Fatherzup World</h6>
@@ -218,7 +202,7 @@
                             <br>
                         </p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial.png"
+                            <img class="img-fluid flex-shrink-0 rounded" src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial.png"
                                 style="width: 58px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Quality Health</h6>
@@ -239,7 +223,7 @@
                 <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                            <img class="img-fluid rounded w-100" src="img/get_in_touch/reach_out_2.jpg" alt="">
+                            <img class="img-fluid rounded w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/get_in_touch/reach_out_2.jpg" alt="">
                         </div>
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div class="mb-4">
@@ -445,16 +429,9 @@
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/banner.js"></script>
-
-    <!-- Custom Javascript -->
-    <script src="js/main.js"></script>
+    <?php
+        wp_footer();
+    ?>
 </body>
 
 </html>
