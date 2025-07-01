@@ -937,7 +937,7 @@ hr {
 }
 
 .service_package_box:hover {
-    box-shadow: 0 12px 30px rgba(153, 38, 240, 0.4);
+    box-shadow: 0 12px 30px rgba(240, 152, 38, 0.4);
     border-color: var(--primary);
     transform: translateY(-6px);
 }
