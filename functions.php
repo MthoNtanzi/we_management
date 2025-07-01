@@ -1,4 +1,6 @@
 <?php
+
+// Dependencies
 function my_custom_theme_assets() {
     // === Styles ===
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap', false);
@@ -26,3 +28,6 @@ function my_custom_theme_assets() {
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'my_custom_theme_assets');
+
+// Kirki Customer
+require get_template_directory()."/includes/customiser.php";
