@@ -449,6 +449,19 @@
 }
 
 
+/* === Call to action === */
+.cta_btn{
+    
+}
+
+@media only screen and (max-width: 768px){
+    .cta_btn{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
 /*** Property List ***/
 .nav-pills .nav-item .btn {
     color: var(--dark);
