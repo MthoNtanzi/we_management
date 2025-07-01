@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>&&&&&&</title>
+    <title>We Management Group - Commercial Property Management & Leasing</title>
     <meta content="" name="keywords">
     <meta content="" name="description">
 
