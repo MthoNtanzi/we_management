@@ -31,3 +31,4 @@ add_action('wp_enqueue_scripts', 'my_custom_theme_assets');
 
 // Kirki Customer
 require get_template_directory()."/includes/customiser.php";
+add_theme_support('customize-selective-refresh-widgets');

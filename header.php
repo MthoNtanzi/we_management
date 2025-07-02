@@ -10,7 +10,7 @@
                 Commercial Property <span class="text-primary">Management & Leasing</span>
             </h1>
 
-            <p class="lead mb-5">
+            <p class="lead mb-5" id="home-description">
             <?php
                 echo wp_kses_post(get_theme_mod("home_description", "At WE Management Group, we bring unparalleled expertise in commercial real estate, combining years of
                 experience in property management, leasing, and retail development to maximize your investment

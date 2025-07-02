@@ -1605,3 +1605,35 @@ hr {
         display: none;
     }
 }
+
+/* Customizer Styling */
+/* Force show edit shortcuts in customizer */
+.customize-partial-edit-shortcut {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.customize-partial-edit-shortcut button {
+    background: #0073aa;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    position: absolute;
+    left: -40px;
+    top: 0;
+    z-index: 9999;
+}
+
+.customize-partial-edit-shortcut button:before {
+    content: "\f464";
+    font-family: dashicons;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    text-align: center;
+}
