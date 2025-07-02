@@ -64,7 +64,7 @@ new \Kirki\Field\Text([
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'footer_address' => [
-            'selector'        => '.footer-address',
+            'selector'        => '#footer_address',
             'render_callback' => function() {
                 return get_theme_mod('footer_address');
             }
@@ -81,7 +81,7 @@ new \Kirki\Field\Text([
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'footer_phone' => [
-            'selector'        => '.footer-phone',
+            'selector'        => '#footer_phone',
             'render_callback' => function() {
                 return get_theme_mod('footer_phone');
             }
@@ -98,7 +98,7 @@ new \Kirki\Field\Text([
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'footer_email' => [
-            'selector'        => '.footer-email',
+            'selector'        => '#footer_email',
             'render_callback' => function() {
                 return get_theme_mod('footer_email');
             }
@@ -115,7 +115,7 @@ new \Kirki\Field\URL([
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'footer_facebook' => [
-            'selector'        => '.footer-facebook',
+            'selector'        => '#footer_facebook',
             'render_callback' => function() {
                 return get_theme_mod('footer_facebook');
             }
@@ -132,7 +132,7 @@ new \Kirki\Field\URL([
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'footer_instagram' => [
-            'selector'        => '.footer-instagram',
+            'selector'        => '#footer_instagram',
             'render_callback' => function() {
                 return get_theme_mod('footer_instagram');
             }
@@ -149,7 +149,7 @@ new \Kirki\Field\URL([
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'footer_linkedin' => [
-            'selector'        => '.footer-linkedin',
+            'selector'        => '#footer_linkedin',
             'render_callback' => function() {
                 return get_theme_mod('footer_linkedin');
             }
@@ -166,7 +166,7 @@ new \Kirki\Field\Textarea([
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'footer_hours' => [
-            'selector'        => '.footer-hours',
+            'selector'        => '#footer_hours',
             'render_callback' => function() {
                 return nl2br(get_theme_mod('footer_hours'));
             }
@@ -186,137 +186,124 @@ new \Kirki\Section(
 );
 
 // CTA Image
-new \Kirki\Field\Image(
-    [
-        'settings' => 'cta_image',
-        'label'    => esc_html__( 'CTA Image', 'kirki' ),
-        'section'  => 'call_to_action_section',
-        'default'  => get_template_directory_uri() . '/assets/img/get_in_touch/reach_out_2.jpg',
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'cta_image' => [
-                'selector'        => '.cta-image',
-                'render_callback' => function() {
-                    return '<img src="'.esc_url(get_theme_mod('cta_image')).'" alt="CTA Image">';
-                }
-            ]
+new \Kirki\Field\Image([
+    'settings' => 'cta_image',
+    'label'    => esc_html__( 'CTA Image', 'kirki' ),
+    'section'  => 'call_to_action_section',
+    'default'  => get_template_directory_uri() . '/assets/img/get_in_touch/reach_out_2.jpg',
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta_image' => [
+            'selector'        => '.cta-image',
+            'render_callback' => function() {
+                return '<img class="img-fluid rounded w-100 cta-image" src="'.esc_url(get_theme_mod('cta_image')).'" alt="CTA Image">';
+            }
         ]
     ]
-);
+]);
 
 // CTA Heading
-new \Kirki\Field\Textarea(
-    [
-        'settings' => 'cta_heading',
-        'label'    => esc_html__( 'CTA Heading', 'kirki' ),
-        'section'  => 'call_to_action_section',
-        'default'  => esc_html__( 'Get in Touch with a Certified Property Expert', 'kirki' ),
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'cta_heading' => [
-                'selector'        => '.cta-heading',
-                'render_callback' => function() {
-                    return get_theme_mod('cta_heading');
-                }
-            ]
+new \Kirki\Field\Textarea([
+    'settings' => 'cta_heading',
+    'label'    => esc_html__( 'CTA Heading', 'kirki' ),
+    'section'  => 'call_to_action_section',
+    'default'  => esc_html__( 'Get in Touch with a Certified Property Expert', 'kirki' ),
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta_heading' => [
+            'selector'        => '.cta-heading',
+            'render_callback' => function() {
+                return get_theme_mod('cta_heading');
+            }
         ]
     ]
-);
+]);
 
 // CTA Text
-new \Kirki\Field\Textarea(
-    [
-        'settings' => 'cta_text',
-        'label'    => esc_html__( 'CTA Text', 'kirki' ),
-        'section'  => 'call_to_action_section',
-        'default'  => esc_html__( 'Have questions or need help finding the right property? Our experienced real estate professional is here to assist you with expert guidance, whether you\'re leasing, buying, or listing your property.', 'kirki' ),
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'cta_text' => [
-                'selector'        => '.cta-text',
-                'render_callback' => function() {
-                    return get_theme_mod('cta_text');
-                }
-            ]
+new \Kirki\Field\Textarea([
+    'settings' => 'cta_text',
+    'label'    => esc_html__( 'CTA Text', 'kirki' ),
+    'section'  => 'call_to_action_section',
+    'default'  => esc_html__( 'Have questions or need help finding the right property? Our experienced real estate professional is here to assist you with expert guidance, whether you\'re leasing, buying, or listing your property.', 'kirki' ),
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta_text' => [
+            'selector'        => '.cta-text',
+            'render_callback' => function() {
+                return get_theme_mod('cta_text');
+            }
         ]
     ]
-);
+]);
 
 // CTA Phone
-new \Kirki\Field\Text(
-    [
-        'settings' => 'cta_phone',
-        'label'    => esc_html__( 'CTA Phone Number', 'kirki' ),
-        'section'  => 'call_to_action_section',
-        'default'  => '786-906-2928',
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'cta_phone' => [
-                'selector'        => '.cta-phone',
-                'render_callback' => function() {
-                    return get_theme_mod('cta_phone');
-                }
-            ]
+new \Kirki\Field\Text([
+    'settings' => 'cta_phone',
+    'label'    => esc_html__( 'CTA Phone Number', 'kirki' ),
+    'section'  => 'call_to_action_section',
+    'default'  => '786-906-2928',
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta_phone' => [
+            'selector'        => '.cta-phone',
+            'render_callback' => function() {
+                return 'tel:' . esc_attr(get_theme_mod('cta_phone'));
+            }
         ]
     ]
-);
+]);
 
 // CTA Call Button Text
-new \Kirki\Field\Text(
-    [
-        'settings' => 'cta_call_button',
-        'label'    => esc_html__( 'CTA Call Button Text', 'kirki' ),
-        'section'  => 'call_to_action_section',
-        'default'  => esc_html__( 'Make A Call', 'kirki' ),
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'cta_call_button' => [
-                'selector'        => '.cta-call-button',
-                'render_callback' => function() {
-                    return get_theme_mod('cta_call_button');
-                }
-            ]
+new \Kirki\Field\Text([
+    'settings' => 'cta_call_button',
+    'label'    => esc_html__( 'CTA Call Button Text', 'kirki' ),
+    'section'  => 'call_to_action_section',
+    'default'  => esc_html__( 'Make A Call', 'kirki' ),
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta_call_button' => [
+            'selector'        => '.cta-call-button',
+            'render_callback' => function() {
+                return get_theme_mod('cta_call_button');
+            }
         ]
     ]
-);
+]);
 
 // CTA Appointment Link
-new \Kirki\Field\Text(
-    [
-        'settings' => 'cta_appointment_link',
-        'label'    => esc_html__( 'CTA Appointment Link', 'kirki' ),
-        'section'  => 'call_to_action_section',
-        'default'  => './contact.html',
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'cta_appointment_link' => [
-                'selector'        => '.cta-appointment-link',
-                'render_callback' => function() {
-                    return get_theme_mod('cta_appointment_link');
-                }
-            ]
+new \Kirki\Field\Text([
+    'settings' => 'cta_appointment_link',
+    'label'    => esc_html__( 'CTA Appointment Link', 'kirki' ),
+    'section'  => 'call_to_action_section',
+    'default'  => './contact.html',
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta_appointment_link' => [
+            'selector'        => '.cta-appointment-link',
+            'render_callback' => function() {
+                return esc_url(get_theme_mod('cta_appointment_link'));
+            }
         ]
     ]
-);
+]);
 
 // CTA Appointment Button Text
-new \Kirki\Field\Text(
-    [
-        'settings' => 'cta_appointment_button',
-        'label'    => esc_html__( 'CTA Appointment Button Text', 'kirki' ),
-        'section'  => 'call_to_action_section',
-        'default'  => esc_html__( 'Get Appointment', 'kirki' ),
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'cta_appointment_button' => [
-                'selector'        => '.cta-appointment-button',
-                'render_callback' => function() {
-                    return get_theme_mod('cta_appointment_button');
-                }
-            ]
+new \Kirki\Field\Text([
+    'settings' => 'cta_appointment_button',
+    'label'    => esc_html__( 'CTA Appointment Button Text', 'kirki' ),
+    'section'  => 'call_to_action_section',
+    'default'  => esc_html__( 'Get Appointment', 'kirki' ),
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta_appointment_button' => [
+            'selector'        => '.cta-appointment-button',
+            'render_callback' => function() {
+                return get_theme_mod('cta_appointment_button');
+            }
         ]
     ]
-);
+]);
+
 
 // FAQ Section:
 new \Kirki\Section(
