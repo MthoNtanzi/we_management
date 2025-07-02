@@ -397,68 +397,62 @@ new \Kirki\Section(
 );
 
 // Heading Field
-new \Kirki\Field\Text(
-    [
-        'settings' => 'about_us_heading',
-        'label'    => esc_html__( 'Section Heading', 'kirki' ),
-        'section'  => 'about_us',
-        'default'  => esc_html__( 'Who we are & why choose us', 'kirki' ),
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'about_us_heading' => [
-                'selector'        => '.about-us-heading',
-                'render_callback' => function() {
-                    return get_theme_mod('about_us_heading');
-                }
-            ]
+new \Kirki\Field\Text([
+    'settings' => 'about_us_heading',
+    'label'    => esc_html__('Section Heading', 'kirki'),
+    'section'  => 'about_us',
+    'default'  => esc_html__('Who we are & why choose us', 'kirki'),
+    'transport'   => 'postMessage',
+    'partial_refresh' => [
+        'about_us_heading' => [
+            'selector'        => '#about-us-heading',
+            'render_callback' => function() {
+                return get_theme_mod('about_us_heading');
+            }
         ]
     ]
-);
+]);
 
 // First Paragraph
-new \Kirki\Field\Textarea(
-    [
-        'settings' => 'about_us_paragraph_1',
-        'label'    => esc_html__( 'First Paragraph', 'kirki' ),
-        'section'  => 'about_us',
-        'default'  => esc_html__( 'WE Management Group is a trusted leader in commercial property management and brokerage, based in Miami, Florida. With our experience, we prioritize transparency, efficiency, and client success.', 'kirki' ),
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'about_us_paragraph_1' => [
-                'selector'        => '.about-us-paragraph-1',
-                'render_callback' => function() {
-                    return get_theme_mod('about_us_paragraph_1');
-                }
-            ]
+new \Kirki\Field\Textarea([
+    'settings' => 'about_us_paragraph_1',
+    'label'    => esc_html__('First Paragraph', 'kirki'),
+    'section'  => 'about_us',
+    'default'  => esc_html__('WE Management Group is a trusted leader in commercial property management and brokerage, based in Miami, Florida. With our experience, we prioritize transparency, efficiency, and client success.', 'kirki'),
+    'transport'   => 'postMessage',
+    'partial_refresh' => [
+        'about_us_paragraph_1' => [
+            'selector'        => '#about-us-paragraph-1',
+            'render_callback' => function() {
+                return get_theme_mod('about_us_paragraph_1');
+            }
         ]
     ]
-);
+]);
 
 // Second Paragraph
-new \Kirki\Field\Textarea(
-    [
-        'settings' => 'about_us_paragraph_2',
-        'label'    => esc_html__( 'Second Paragraph', 'kirki' ),
-        'section'  => 'about_us',
-        'default'  => esc_html__( "We pride ourselves on fostering strong tenant relationships, optimizing asset performance, and creating vibrant spaces that drive success for property owners and tenants alike. Whether you're looking to enhance your property's value, attract quality tenants, or streamline operations, we are your trusted partner in achieving your commercial real estate goals. Let us help you unlock the full potential of your assets and build thriving spaces for businesses and communities.", 'kirki' ),
-        'transport'   => 'postMessage',
-        'partial_refresh' => [
-            'about_us_paragraph_2' => [
-                'selector'        => '.about-us-paragraph-2',
-                'render_callback' => function() {
-                    return get_theme_mod('about_us_paragraph_2');
-                }
-            ]
+new \Kirki\Field\Textarea([
+    'settings' => 'about_us_paragraph_2',
+    'label'    => esc_html__('Second Paragraph', 'kirki'),
+    'section'  => 'about_us',
+    'default'  => esc_html__("We pride ourselves on fostering strong tenant relationships, optimizing asset performance, and creating vibrant spaces that drive success for property owners and tenants alike. Whether you're looking to enhance your property's value, attract quality tenants, or streamline operations, we are your trusted partner in achieving your commercial real estate goals. Let us help you unlock the full potential of your assets and build thriving spaces for businesses and communities.", 'kirki'),
+    'transport'   => 'postMessage',
+    'partial_refresh' => [
+        'about_us_paragraph_2' => [
+            'selector'        => '#about-us-paragraph-2',
+            'render_callback' => function() {
+                return get_theme_mod('about_us_paragraph_2');
+            }
         ]
     ]
-);
+]);
 
 // Extra Info Section
 new \Kirki\Section(
     'extra_info',
     [
-        'title'       => esc_html__( 'Extra Info Blocks', 'kirki' ),
-        'description' => esc_html__( 'Edit the content for Local Expertise, Licensed Professionals, and Proactive Management.', 'kirki' ),
+        'title'       => esc_html__('Extra Info Blocks', 'kirki'),
+        'description' => esc_html__('Edit the content for Local Expertise, Licensed Professionals, and Proactive Management.', 'kirki'),
         'panel'       => 'wmg',
         'priority'    => 180,
     ]
@@ -467,13 +461,13 @@ new \Kirki\Section(
 // Block 1: Local Expertise
 new \Kirki\Field\Text([
     'settings' => 'extra_info_heading_1',
-    'label'    => esc_html__( 'Heading 1', 'kirki' ),
+    'label'    => esc_html__('Heading 1', 'kirki'),
     'section'  => 'extra_info',
-    'default'  => esc_html__( 'Local Expertise', 'kirki' ),
+    'default'  => esc_html__('Local Expertise', 'kirki'),
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'extra_info_heading_1' => [
-            'selector'        => '.extra-info-heading-1',
+            'selector'        => '#extra-info-heading-1',
             'render_callback' => function() {
                 return get_theme_mod('extra_info_heading_1');
             }
@@ -483,13 +477,13 @@ new \Kirki\Field\Text([
 
 new \Kirki\Field\Textarea([
     'settings' => 'extra_info_paragraph_1',
-    'label'    => esc_html__( 'Paragraph 1', 'kirki' ),
+    'label'    => esc_html__('Paragraph 1', 'kirki'),
     'section'  => 'extra_info',
-    'default'  => esc_html__( 'Our deep understanding of the industry allows us to navigate the complexities of commercial properties with precision, ensuring seamless operations and maximum value for your investments.', 'kirki' ),
+    'default'  => esc_html__('Our deep understanding of the industry allows us to navigate the complexities of commercial properties with precision, ensuring seamless operations and maximum value for your investments.', 'kirki'),
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'extra_info_paragraph_1' => [
-            'selector'        => '.extra-info-paragraph-1',
+            'selector'        => '#extra-info-paragraph-1',
             'render_callback' => function() {
                 return get_theme_mod('extra_info_paragraph_1');
             }
@@ -500,13 +494,13 @@ new \Kirki\Field\Textarea([
 // Block 2: Licensed Professionals
 new \Kirki\Field\Text([
     'settings' => 'extra_info_heading_2',
-    'label'    => esc_html__( 'Heading 2', 'kirki' ),
+    'label'    => esc_html__('Heading 2', 'kirki'),
     'section'  => 'extra_info',
-    'default'  => esc_html__( 'Licensed Professionals', 'kirki' ),
+    'default'  => esc_html__('Licensed Professionals', 'kirki'),
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'extra_info_heading_2' => [
-            'selector'        => '.extra-info-heading-2',
+            'selector'        => '#extra-info-heading-2',
             'render_callback' => function() {
                 return get_theme_mod('extra_info_heading_2');
             }
@@ -516,13 +510,13 @@ new \Kirki\Field\Text([
 
 new \Kirki\Field\Textarea([
     'settings' => 'extra_info_paragraph_2',
-    'label'    => esc_html__( 'Paragraph 2', 'kirki' ),
+    'label'    => esc_html__('Paragraph 2', 'kirki'),
     'section'  => 'extra_info',
-    'default'  => esc_html__( 'Our team holds FL Real Estate Broker certifications for trusted service. With deep knowledge of local regulations and a strong ethical commitment, we handle every transaction with professionalism and integrity.', 'kirki' ),
+    'default'  => esc_html__('Our team holds FL Real Estate Broker certifications for trusted service. With deep knowledge of local regulations and a strong ethical commitment, we handle every transaction with professionalism and integrity.', 'kirki'),
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'extra_info_paragraph_2' => [
-            'selector'        => '.extra-info-paragraph-2',
+            'selector'        => '#extra-info-paragraph-2',
             'render_callback' => function() {
                 return get_theme_mod('extra_info_paragraph_2');
             }
@@ -533,13 +527,13 @@ new \Kirki\Field\Textarea([
 // Block 3: Proactive Management
 new \Kirki\Field\Text([
     'settings' => 'extra_info_heading_3',
-    'label'    => esc_html__( 'Heading 3', 'kirki' ),
+    'label'    => esc_html__('Heading 3', 'kirki'),
     'section'  => 'extra_info',
-    'default'  => esc_html__( 'Proactive Management', 'kirki' ),
+    'default'  => esc_html__('Proactive Management', 'kirki'),
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'extra_info_heading_3' => [
-            'selector'        => '.extra-info-heading-3',
+            'selector'        => '#extra-info-heading-3',
             'render_callback' => function() {
                 return get_theme_mod('extra_info_heading_3');
             }
@@ -549,13 +543,13 @@ new \Kirki\Field\Text([
 
 new \Kirki\Field\Textarea([
     'settings' => 'extra_info_paragraph_3',
-    'label'    => esc_html__( 'Paragraph 3', 'kirki' ),
+    'label'    => esc_html__('Paragraph 3', 'kirki'),
     'section'  => 'extra_info',
-    'default'  => esc_html__( 'We take a collaborative and personalized approach to property management. As a boutique firm, we prioritize understanding your unique objectives and tailoring solutions to meet your specific needs.', 'kirki' ),
+    'default'  => esc_html__('We take a collaborative and personalized approach to property management. As a boutique firm, we prioritize understanding your unique objectives and tailoring solutions to meet your specific needs.', 'kirki'),
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'extra_info_paragraph_3' => [
-            'selector'        => '.extra-info-paragraph-3',
+            'selector'        => '#extra-info-paragraph-3',
             'render_callback' => function() {
                 return get_theme_mod('extra_info_paragraph_3');
             }
@@ -577,13 +571,13 @@ new \Kirki\Section(
 // Section Heading
 new \Kirki\Field\Text([
     'settings' => 'testimonials_heading',
-    'label'    => esc_html__( 'Section Heading', 'kirki' ),
+    'label'    => esc_html__('Section Heading', 'kirki'),
     'section'  => 'testimonials',
-    'default'  => esc_html__( 'What Our Clients Say', 'kirki' ),
+    'default'  => esc_html__('What Our Clients Say', 'kirki'),
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'testimonials_heading' => [
-            'selector'        => '.testimonials-heading',
+            'selector'        => '#testimonials-heading',
             'render_callback' => function() {
                 return get_theme_mod('testimonials_heading');
             }
@@ -594,13 +588,13 @@ new \Kirki\Field\Text([
 // Section Description
 new \Kirki\Field\Textarea([
     'settings' => 'testimonials_description',
-    'label'    => esc_html__( 'Section Description', 'kirki' ),
+    'label'    => esc_html__('Section Description', 'kirki'),
     'section'  => 'testimonials',
-    'default'  => esc_html__( "We take pride in the relationships we've built. Here's what some of our clients have to say about their experience working with us - real stories from satisfied tenants, landlords, and partners.", 'kirki' ),
+    'default'  => esc_html__("We take pride in the relationships we've built. Here's what some of our clients have to say about their experience working with us - real stories from satisfied tenants, landlords, and partners.", 'kirki'),
     'transport'   => 'postMessage',
     'partial_refresh' => [
         'testimonials_description' => [
-            'selector'        => '.testimonials-description',
+            'selector'        => '#testimonials-description',
             'render_callback' => function() {
                 return get_theme_mod('testimonials_description');
             }
@@ -610,31 +604,42 @@ new \Kirki\Field\Textarea([
 
 // Testimonials Repeater Field
 new \Kirki\Field\Repeater([
-    'settings' => 'testimonials_repeater',
-    'label'    => esc_html__( 'Client Testimonials', 'kirki' ),
+    'settings' => 'client_testimonials',
+    'label'    => esc_html__('Client Testimonials', 'kirki'),
     'section'  => 'testimonials',
-    'priority' => 20,
-    'transport'   => 'postMessage',
+    'row_label' => [
+        'type' => 'text',
+        'value' => esc_html__('Testimonial', 'kirki'),
+    ],
+    'button_label' => esc_html__('Add New Testimonial', 'kirki'),
+    'transport' => 'postMessage',
     'partial_refresh' => [
-        'testimonials_repeater' => [
-            'selector'        => '.testimonials-container',
+        'client_testimonials' => [
+            'selector'        => '#client-testimonials',
             'render_callback' => function() {
-                $testimonials = get_theme_mod('testimonials_repeater', []);
+                $testimonials = get_theme_mod('client_testimonials', []);
                 ob_start();
-                foreach ($testimonials as $testimonial) {
-                    echo '<div class="testimonial-item">';
-                    if (!empty($testimonial['image'])) {
-                        echo '<img src="'.esc_url($testimonial['image']).'" alt="'.esc_attr($testimonial['name']).'">';
-                    }
-                    echo '<blockquote>'.esc_html($testimonial['message']).'</blockquote>';
-                    echo '<cite>';
-                    echo '<strong>'.esc_html($testimonial['name']).'</strong>';
-                    if (!empty($testimonial['role'])) {
-                        echo ', '.esc_html($testimonial['role']);
-                    }
-                    echo '</cite>';
-                    echo '</div>';
-                }
+                ?>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s" id="client-testimonials">
+                    <?php foreach ($testimonials as $item) : ?>
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="bg-white border rounded p-4" style="height: 320px;">
+                                <p><?php echo wp_kses_post($item['message']); ?></p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img class="img-fluid flex-shrink-0 rounded"
+                                        src="<?php echo esc_url($item['image'] ?: get_template_directory_uri() . '/assets/img/testimonial.png'); ?>"
+                                        alt="<?php echo esc_attr($item['name']); ?>"
+                                        style="width: 58px; height: 45px;">
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1"><?php echo esc_html($item['name']); ?></h6>
+                                        <small><?php echo esc_html($item['role']); ?></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php
                 return ob_get_clean();
             }
         ]

@@ -8,21 +8,21 @@
                 </div>
 
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="mb-4 text-capitalize">
+                    <h1 class="mb-4 text-capitalize" id="about-us-heading">
                         <?php echo esc_html( get_theme_mod(
                             'about_us_heading',
                             'Who we are & why choose us'
                         ) ); ?>
                     </h1>
 
-                    <p class="mb-4">
+                    <p class="mb-4" id="about-us-paragraph-1">
                         <?php echo wp_kses_post( get_theme_mod(
                             'about_us_paragraph_1',
                             'WE Management Group is a trusted leader in commercial property management and brokerage, based in Miami, Florida. With our experience, we prioritize transparency, efficiency, and client success.'
                         ) ); ?>
                     </p>
 
-                    <p class="mb-4">
+                    <p class="mb-4" id="about-us-paragraph-2">
                         <?php echo wp_kses_post( get_theme_mod(
                             'about_us_paragraph_2',
                             "We pride ourselves on fostering strong tenant relationships, optimizing asset performance, and creating vibrant spaces that drive success for property owners and tenants alike. Whether you're looking to enhance your property's value, attract quality tenants, or streamline operations, we are your trusted partner in achieving your commercial real estate goals. Let us help you unlock the full potential of your assets and build thriving spaces for businesses and communities."
@@ -33,28 +33,28 @@
             </div>
             <div class="extra_info_container py-4">
                 <div class="extra_info">
-                    <h3 class="extra_info_heading">
+                    <h3 class="extra_info_heading" id="extra-info-heading-1">
                         <?php echo esc_html( get_theme_mod( 'extra_info_heading_1', 'Local Expertise' ) ); ?>
                     </h3>
-                    <p class="extra_info_p">
+                    <p class="extra_info_p" id="extra-info-paragraph-1">
                         <?php echo wp_kses_post( get_theme_mod( 'extra_info_paragraph_1', 'Our deep understanding of the industry allows us to navigate the complexities of commercial properties with precision, ensuring seamless operations and maximum value for your investments.' ) ); ?>
                     </p>
                 </div>
 
                 <div class="extra_info">
-                    <h3 class="extra_info_heading">
+                    <h3 class="extra_info_heading" id="extra-info-heading-2">
                         <?php echo esc_html( get_theme_mod( 'extra_info_heading_2', 'Licensed Professionals' ) ); ?>
                     </h3>
-                    <p class="extra_info_p">
+                    <p class="extra_info_p" id="extra-info-paragraph-2">
                         <?php echo wp_kses_post( get_theme_mod( 'extra_info_paragraph_2', 'Our team holds FL Real Estate Broker certifications for trusted service. With deep knowledge of local regulations and a strong ethical commitment, we handle every transaction with professionalism and integrity.' ) ); ?>
                     </p>
                 </div>
 
                 <div class="extra_info">
-                    <h3 class="extra_info_heading">
+                    <h3 class="extra_info_heading" id="extra-info-heading-3">
                         <?php echo esc_html( get_theme_mod( 'extra_info_heading_3', 'Proactive Management' ) ); ?>
                     </h3>
-                    <p class="extra_info_p">
+                    <p class="extra_info_p" id="extra-info-paragraph-3">
                         <?php echo wp_kses_post( get_theme_mod( 'extra_info_paragraph_3', 'We take a collaborative and personalized approach to property management. As a boutique firm, we prioritize understanding your unique objectives and tailoring solutions to meet your specific needs.' ) ); ?>
                     </p>
                 </div>

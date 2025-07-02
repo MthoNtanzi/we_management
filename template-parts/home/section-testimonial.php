@@ -1,10 +1,10 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="mb-3">
+            <h1 class="mb-3" id="testimonials-heading">
                 <?php echo esc_html( get_theme_mod( 'testimonials_heading', 'What Our Clients Say' ) ); ?>
             </h1>
-            <p>
+            <p id="testimonials-description">
                 <?php echo wp_kses_post( get_theme_mod( 'testimonials_description', "We take pride in the relationships we've built. Here's what some of our clients have to say about their experience working with us - real stories from satisfied tenants, landlords, and partners." ) ); ?>
             </p>
         </div>
@@ -38,25 +38,25 @@ if (empty($testimonials)) {
 }
 ?>
 
-<div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-    <?php foreach ( $testimonials as $item ) : ?>
-        <div class="testimonial-item bg-light rounded p-3">
-            <div class="bg-white border rounded p-4" style="height: 320px;">
-                <p><?php echo wp_kses_post( $item['message'] ); ?></p>
-                <div class="d-flex align-items-center mt-3">
-                    <img class="img-fluid flex-shrink-0 rounded"
-                         src="<?php echo esc_url( $item['image'] ?: get_template_directory_uri() . '/assets/img/testimonial.png' ); ?>"
-                         alt="<?php echo esc_attr( $item['name'] ); ?>"
-                         style="width: 58px; height: 45px;">
-                    <div class="ps-3">
-                        <h6 class="fw-bold mb-1"><?php echo esc_html( $item['name'] ); ?></h6>
-                        <small><?php echo esc_html( $item['role'] ); ?></small>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s" id="client-testimonials">
+            <?php foreach ( $testimonials as $item ) : ?>
+                <div class="testimonial-item bg-light rounded p-3">
+                    <div class="bg-white border rounded p-4" style="height: 320px;">
+                        <p><?php echo wp_kses_post( $item['message'] ); ?></p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img class="img-fluid flex-shrink-0 rounded"
+                                src="<?php echo esc_url( $item['image'] ?: get_template_directory_uri() . '/assets/img/testimonial.png' ); ?>"
+                                alt="<?php echo esc_attr( $item['name'] ); ?>"
+                                style="width: 58px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1"><?php echo esc_html( $item['name'] ); ?></h6>
+                                <small><?php echo esc_html( $item['role'] ); ?></small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
         </div>
-    <?php endforeach; ?>
-</div>
 
     </div>
 

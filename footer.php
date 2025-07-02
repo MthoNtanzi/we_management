@@ -4,7 +4,7 @@
             <!-- Contact Info -->
             <div class="col-lg-4 row-md">
                 <h5 class="text-white mb-4">Get In Touch</h5>
-                <p class="mb-2" id="footer_address">
+                <p class="mb-2" id="address">
                     <i class="fa fa-map-marker-alt me-3"></i>
                     <?php echo wp_kses_post(get_theme_mod('footer_address', '1031 Ives Dairy Rd')); ?>
                 </p>
