@@ -13,21 +13,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsiveNew">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="<?php echo home_url(); ?>">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/about'); ?>">About</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown">Services</a>
+                    <a class="nav-link dropdown-toggle" href="<?php echo home_url('/services'); ?>" id="servicesDropdown">Services</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="property-management.html">Property Management</a>
                         </li>
-                        <li><a class="dropdown-item" href="brokerage.html">Brokerage</a></li>
-                        <li><a class="dropdown-item" href="facility-management.html">Facility Management</a>
+                        <li><a class="dropdown-item" href="/brokerage">Brokerage</a></li>
+                        <li><a class="dropdown-item" href="/facility-management">Facility Management</a>
                         </li>
-                        <li><a class="dropdown-item" href="we-property-care.html">WE Property Care™</a></li>
+                        <li><a class="dropdown-item" href="/we-property-care">WE Property Care™</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/contact'); ?>">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/blog'); ?>">Blog</a></li>
             </ul>
         </div>
     </div>

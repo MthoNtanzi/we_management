@@ -2,6 +2,7 @@
 /**
  * Template Name: About Us - WE Management
  */
+wp_head();
 get_header();
 ?>
 
@@ -100,3 +101,4 @@ get_header();
 </div>
 
 <?php get_footer(); ?>
+<?php wp_footer(); ?>

@@ -20,6 +20,11 @@ Version: 1.0.0
     --dark: #0E2E50;
 }
 
+html{
+    padding: 0;
+    margin: 0;
+}
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -82,7 +87,7 @@ Version: 1.0.0
 /*** Navbar ***/
 .nav-bar {
     position: relative;
-    margin-top: 45px;
+    margin-top: 25px;
     padding: 0 3rem;
     transition: .5s;
     z-index: 9999;
@@ -1303,7 +1308,7 @@ hr {
 
 .accordion-button:not(.collapsed) {
     background-color: var(--primary);
-    color: #fff;
+    color: var(--primary);
 }
 
 .accordion-button:focus {
