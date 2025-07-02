@@ -20,15 +20,17 @@
 </head>
 
 <body>
+    <div class="container-xxl bg-white p-0">
     <!-- Spinner -->
-    <?php
+    <?php    
         get_template_part('template-parts/spinner');
     ?>
 
-    <!-- Header -->
     <?php
         get_header();
     ?>
+
+    
 
     <!-- About Start -->
     <?php
@@ -56,12 +58,14 @@
     <?php 
         get_footer();
     ?>
+    </div>
     <!-- Footer End -->
 
     <!-- JavaScript Libraries -->
     <?php
         wp_footer();
     ?>
+    
 </body>
 
 </html>

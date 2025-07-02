@@ -188,3 +188,15 @@ function custom_comment_format($comment, $args, $depth) {
 // Kirki Customer
 require get_template_directory() . "/includes/customiser.php";
 add_theme_support('customize-selective-refresh-widgets');
+require get_template_directory()."/includes/customiser.php";
+add_theme_support('customize-selective-refresh-widgets');
+
+require_once get_template_directory() . '/includes/class-wp-bootstrap-navwalker.php';
+
+// Register menu locations
+function wmg_register_menus() {
+    register_nav_menus([
+        'primary' => __('Primary Menu', 'wmg'),
+    ]);
+}
+add_action('after_setup_theme', 'wmg_register_menus');
