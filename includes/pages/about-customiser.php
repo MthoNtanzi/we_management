@@ -5,7 +5,7 @@ if ( ! class_exists( 'Kirki' ) ) {
 
 // Declare the Panel
 new \Kirki\Panel(
-    'wmg',
+    'about_page',
     [
         'priority'    => 10,
         'title'       => esc_html__( 'About Page', 'kirki' ),
@@ -20,7 +20,7 @@ new \Kirki\Section(
     'about_our_story',
     [
         'title'       => esc_html__( 'Our Story', 'kirki' ),
-        'panel'       => 'wmg',
+        'panel'       => 'about_page',
         'priority'    => 10,
         'active_callback' => function () {
             return is_page_template( 'template-about-us.php' );
