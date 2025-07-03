@@ -53,7 +53,7 @@ new \Kirki\Field\Textarea(
         'settings' => 'our_story_paragraph',
         'label'    => esc_html__( 'Paragraph', 'kirki' ),
         'section'  => 'about_our_story',
-        'default'  => 'At WE Management Group, we bring unparalleled expertise in commercial real estate, combining years of experience in property management, leasing, and retail development. Our deep understanding of the industry allows us to navigate the complexities of commercial properties with precision...',
+        'default'  => 'At WE Management Group, we bring unparalleled expertise...',
         'transport' => 'postMessage',
         'partial_refresh' => [
             'our_story_paragraph' => [
@@ -87,6 +87,15 @@ new \Kirki\Field\Text(
         'label'    => esc_html__( 'Section Title', 'kirki' ),
         'section'  => 'about_our_approach',
         'default'  => 'Our Approach',
+        'transport' => 'postMessage',
+        'partial_refresh' => [
+            'our_approach_heading' => [
+                'selector' => '#our-approach-heading',
+                'render_callback' => function() {
+                    return get_theme_mod('our_approach_heading');
+                }
+            ]
+        ]
     ]
 );
 
@@ -95,7 +104,16 @@ new \Kirki\Field\Textarea(
         'settings' => 'our_approach_paragraph',
         'label'    => esc_html__( 'Intro Paragraph', 'kirki' ),
         'section'  => 'about_our_approach',
-        'default'  => 'We take a collaborative and personalized approach to property management...',
+        'default'  => 'We take a collaborative and personalized approach...',
+        'transport' => 'postMessage',
+        'partial_refresh' => [
+            'our_approach_paragraph' => [
+                'selector' => '#our-approach-paragraph',
+                'render_callback' => function() {
+                    return get_theme_mod('our_approach_paragraph');
+                }
+            ]
+        ]
     ]
 );
 
@@ -120,6 +138,15 @@ new \Kirki\Field\Text(
         'label'    => esc_html__( 'Founder Name', 'kirki' ),
         'section'  => 'about_founder',
         'default'  => 'Jessica Alavarez',
+        'transport' => 'postMessage',
+        'partial_refresh' => [
+            'founder_name' => [
+                'selector' => '#founder-name',
+                'render_callback' => function() {
+                    return get_theme_mod('founder_name');
+                }
+            ]
+        ]
     ]
 );
 
@@ -129,6 +156,15 @@ new \Kirki\Field\Text(
         'label'    => esc_html__( 'Founder Title', 'kirki' ),
         'section'  => 'about_founder',
         'default'  => 'Founder & CEO',
+        'transport' => 'postMessage',
+        'partial_refresh' => [
+            'founder_title' => [
+                'selector' => '#founder-title',
+                'render_callback' => function() {
+                    return get_theme_mod('founder_title');
+                }
+            ]
+        ]
     ]
 );
 
@@ -137,7 +173,16 @@ new \Kirki\Field\Textarea(
         'settings' => 'founder_bio',
         'label'    => esc_html__( 'Founder Bio', 'kirki' ),
         'section'  => 'about_founder',
-        'default'  => 'With over 15 years of experience in real estate and property management, Jessica founded WEManagement with a vision to revolutionize the industry through technology and exceptional service.',
+        'default'  => 'With over 15 years of experience...',
+        'transport' => 'postMessage',
+        'partial_refresh' => [
+            'founder_bio' => [
+                'selector' => '#founder-bio',
+                'render_callback' => function() {
+                    return get_theme_mod('founder_bio');
+                }
+            ]
+        ]
     ]
 );
 
@@ -146,7 +191,16 @@ new \Kirki\Field\Textarea(
         'settings' => 'founder_quote',
         'label'    => esc_html__( 'Founder Quote', 'kirki' ),
         'section'  => 'about_founder',
-        'default'  => '"Our success comes from treating every property as if it were our own..."',
+        'default'  => '"Our success comes from treating every property..."',
+        'transport' => 'postMessage',
+        'partial_refresh' => [
+            'founder_quote' => [
+                'selector' => '#founder-quote',
+                'render_callback' => function() {
+                    return get_theme_mod('founder_quote');
+                }
+            ]
+        ]
     ]
 );
 
@@ -156,5 +210,14 @@ new \Kirki\Field\URL(
         'label'    => esc_html__( 'LinkedIn URL', 'kirki' ),
         'section'  => 'about_founder',
         'default'  => 'https://www.linkedin.com/in/jessicaalvarezcre/',
+        'transport' => 'postMessage',
+        'partial_refresh' => [
+            'founder_linkedin' => [
+                'selector' => '#founder-linkedin',
+                'render_callback' => function() {
+                    return get_theme_mod('founder_linkedin');
+                }
+            ]
+        ]
     ]
 );
