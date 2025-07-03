@@ -20,11 +20,6 @@
 </head>
 
 <body>
-<<<<<<< Updated upstream
-
-=======
-    <div class="container-xxl bg-white p-0">
->>>>>>> Stashed changes
     <!-- Spinner -->
     <?php    
         get_template_part('template-parts/spinner');
