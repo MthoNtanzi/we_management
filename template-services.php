@@ -1,6 +1,6 @@
 <?php
     /**
-     * Template Name: Services - WE Management
+     * Template Name: Services
      */
 
      get_template_part('template-parts/section', "header");

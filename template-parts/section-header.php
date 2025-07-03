@@ -53,24 +53,41 @@
             <div class="row g-0 align-items-center flex-column-reverse flex-md-row page_header">
                 <div class="col-md-6 text-wrapper p-5 mt-lg-5">
                     <?php if (!is_search()) : ?>
+                        <?php
+                        // Get full block content of the page
+                        $blocks = parse_blocks(get_post_field('post_content', get_the_ID()));
+
+                        $heading = '';
+                        $paragraph = '';
+
+                        foreach ($blocks as $block) {
+                            if ($block['blockName'] === 'core/heading' && empty($heading)) {
+                                $heading = trim(strip_tags(render_block($block)));
+                            }
+
+                            if ($block['blockName'] === 'core/paragraph' && empty($paragraph)) {
+                                $paragraph = trim(strip_tags(render_block($block)));
+                            }
+
+                            // Stop looping if both found
+                            if ($heading && $paragraph) break;
+                        }
+
+                        // Format heading
+                        $title_parts = explode(' ', $heading, 2);
+                        ?>
+
                         <h1 class="display-5 animated fadeIn mb-4">
                             <?php
-                            $title = get_the_title();
-                            $title_parts = explode(' ', $title, 2);
-                            if (count($title_parts) === 2) {
-                                echo esc_html($title_parts[0]) . ' <span class="text-primary">' . esc_html($title_parts[1]) . '</span>';
-                            } else {
-                                echo esc_html($title);
+                            echo esc_html($title_parts[0]);
+                            if (isset($title_parts[1])) {
+                                echo ' <span class="text-primary">' . esc_html($title_parts[1]) . '</span>';
                             }
                             ?>
                         </h1>
 
                         <p class="animated fadeIn mb-4 pb-2">
-                            <?php
-                            $content = apply_filters('the_content', get_post_field('post_content', get_the_ID()));
-                            $paragraphs = explode("\n", wp_strip_all_tags($content));
-                            echo esc_html(trim($paragraphs[0]));
-                            ?>
+                            <?php echo esc_html($paragraph); ?>
                         </p>
                     <?php else : ?>
                         <h1 class="display-5 animated fadeIn mb-4">
@@ -81,6 +98,7 @@
                         </p>
                     <?php endif; ?>
                 </div>
+
 
                 <div class="col-md-6 image-wrapper animated fadeIn position-relative">
                     <div class="owl-carousel header-carousel">
