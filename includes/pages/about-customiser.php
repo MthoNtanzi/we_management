@@ -73,7 +73,7 @@ new \Kirki\Section(
     'about_our_approach',
     [
         'title'       => esc_html__( 'Our Approach', 'kirki' ),
-        'panel'       => 'wmg',
+        'panel'       => 'about_page',
         'priority'    => 20,
         'active_callback' => function () {
             return is_page_template( 'template-about-us.php' );
@@ -106,7 +106,7 @@ new \Kirki\Section(
     'about_founder',
     [
         'title'       => esc_html__( 'Founder Section', 'kirki' ),
-        'panel'       => 'wmg',
+        'panel'       => 'about_page',
         'priority'    => 30,
         'active_callback' => function () {
             return is_page_template( 'template-about-us.php' );
