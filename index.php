@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
     <title>We Management Group - Commercial Property Management & Leasing</title>
     <meta content="" name="keywords">
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+
     <!-- Spinner -->
     <?php    
         get_template_part('template-parts/spinner');
@@ -29,8 +29,6 @@
     <?php
         get_header();
     ?>
-
-    
 
     <!-- About Start -->
     <?php
@@ -58,7 +56,6 @@
     <?php 
         get_footer();
     ?>
-    </div>
     <!-- Footer End -->
 
     <!-- JavaScript Libraries -->

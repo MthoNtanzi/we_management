@@ -41,7 +41,7 @@
                 <div class="col-md-6 p-5 mt-lg-5 text-wrapper">
                     <h1 class="display-5 animated fadeIn mb-4" style="margin-top: 35px;">
                         Blo<span class="text-primary">g</span>
-                    </h1>
+                    </h1>  
                     <nav aria-label="breadcrumb" class="animated fadeIn">
                         <ol class="breadcrumb mb-0 bg-transparent p-0">
                             <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>" class="text-decoration-none">Home</a></li>
