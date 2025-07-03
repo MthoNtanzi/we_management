@@ -39,7 +39,7 @@
                         'container' => false,
                         'menu_class' => 'navbar-nav ms-auto',
                         'depth' => 2,
-                        'walker' => new WP_Bootstrap_Navwalker(), 
+                        'walker' => new WP_Bootstrap_Navwalker(),
                         'fallback_cb' => '__return_false'
                     ));
                     ?>
@@ -52,14 +52,34 @@
         <div class="container-fluid header bg-white p-0">
             <div class="row g-0 align-items-center flex-column-reverse flex-md-row page_header">
                 <div class="col-md-6 text-wrapper p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">
-                        Our <span class="text-primary">Service</span>
-                    </h1>
-                    <p class="animated fadeIn mb-4 pb-2">
-                        At W.E. Management Group, we specialize in managing and leasing commercial spaces. From
-                        attracting quality tenants to streamlining daily operations, we help property owners enhance
-                        asset performance and build lasting value.
-                    </p>
+                    <?php if (!is_search()) : ?>
+                        <h1 class="display-5 animated fadeIn mb-4">
+                            <?php
+                            $title = get_the_title();
+                            $title_parts = explode(' ', $title, 2);
+                            if (count($title_parts) === 2) {
+                                echo esc_html($title_parts[0]) . ' <span class="text-primary">' . esc_html($title_parts[1]) . '</span>';
+                            } else {
+                                echo esc_html($title);
+                            }
+                            ?>
+                        </h1>
+
+                        <p class="animated fadeIn mb-4 pb-2">
+                            <?php
+                            $content = apply_filters('the_content', get_post_field('post_content', get_the_ID()));
+                            $paragraphs = explode("\n", wp_strip_all_tags($content));
+                            echo esc_html(trim($paragraphs[0]));
+                            ?>
+                        </p>
+                    <?php else : ?>
+                        <h1 class="display-5 animated fadeIn mb-4">
+                            Search <span class="text-primary">Results</span>
+                        </h1>
+                        <p class="animated fadeIn mb-4 pb-2">
+                            Here are the results matching your query. Use the search bar to refine or try a different keyword.
+                        </p>
+                    <?php endif; ?>
                 </div>
 
                 <div class="col-md-6 image-wrapper animated fadeIn position-relative">
