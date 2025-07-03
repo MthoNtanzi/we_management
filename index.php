@@ -20,7 +20,11 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream
 
+=======
+    <div class="container-xxl bg-white p-0">
+>>>>>>> Stashed changes
     <!-- Spinner -->
     <?php    
         get_template_part('template-parts/spinner');
@@ -29,6 +33,8 @@
     <?php
         get_header();
     ?>
+
+    
 
     <!-- About Start -->
     <?php
@@ -56,6 +62,7 @@
     <?php 
         get_footer();
     ?>
+    </div>
     <!-- Footer End -->
 
     <!-- JavaScript Libraries -->

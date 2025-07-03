@@ -251,8 +251,18 @@ add_theme_support('customize-selective-refresh-widgets');
 
 require_once get_template_directory() . '/includes/class-wp-bootstrap-navwalker.php';
 
+<<<<<<< Updated upstream
 // === Register menu locations ===
 function register_my_menus() {
     register_nav_menu('main-menu', __('Main Menu'));
 }
 add_action('after_setup_theme', 'register_my_menus');
+=======
+// Register menu locations
+function wmg_register_menus() {
+    register_nav_menus([
+        'primary' => __('Primary Menu', 'wmg'),
+    ]);
+}
+add_action('after_setup_theme', 'wmg_register_menus');
+>>>>>>> Stashed changes
