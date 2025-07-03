@@ -246,8 +246,8 @@ add_action('wp_head', 'wemanagement_track_post_views');
 // Kirki Customer
 require get_template_directory() . "/includes/customiser.php";
 require get_template_directory() . "/includes/pages/about-customiser.php";
+require get_template_directory()."/includes/pages/services-customiser.php";
 add_theme_support('customize-selective-refresh-widgets');
-
 
 require_once get_template_directory() . '/includes/class-wp-bootstrap-navwalker.php';
 
