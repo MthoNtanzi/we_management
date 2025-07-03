@@ -31,6 +31,14 @@ function my_custom_theme_assets()
 }
 add_action('wp_enqueue_scripts', 'my_custom_theme_assets');
 
+function wmg_enqueue_material_icons() {
+    wp_enqueue_style(
+        'google-material-symbols',
+        'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'
+    );
+}
+add_action('wp_enqueue_scripts', 'wmg_enqueue_material_icons');
+
 // Blog Settings
 function wemanagement_blog_customizer($wp_customize)
 {
