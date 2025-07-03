@@ -385,6 +385,7 @@
 /* Related Posts */
 .blog-related {
     margin-bottom: 50px;
+    padding: 20px;
 }
 
 .blog-related h3 {
@@ -406,6 +407,7 @@
 .blog-related-item {
     margin-bottom: 30px;
     transition: all 0.3s;
+    padding: 20px;
 }
 
 .blog-related-item:hover {

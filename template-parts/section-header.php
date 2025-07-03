@@ -7,26 +7,25 @@
     <title>Services - We Management Group</title>
 
     <?php
-        wp_head();
+    wp_head();
     ?>
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0">
-        
+
         <!-- Spinner Start -->
         <?php
-            get_template_part('template-parts/', 'spinner');
+        get_template_part('template-parts/', 'spinner');
         ?>
         <!-- Spinner End -->
-
 
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/assets/img/logo.jpg" alt="Icon" style="width: 30px; height: 30px;">
+                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="Icon" style="width: 30px; height: 30px;">
                     </div>
                     <h1 class="m-0 text-primary">WEManagement</h1>
                 </a>
@@ -34,35 +33,20 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-
-                        <!-- Dropdown for service sections -->
-                        <div class="nav-item dropdown">
-                            <a href="services.html" class="nav-link dropdown-toggle active" id="servicesDropdown"
-                                role="button">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="property-management.html">Property Management</a>
-                                </li>
-                                <li><a class="dropdown-item" href="brokerage.html">Brokerage</a></li>
-                                <li><a class="dropdown-item" href="facility-management.html">Facility Management</a></li>
-                                <li><a class="dropdown-item" href="we-property-care.html">WE Property Care™</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Dropdown for service sections -->
-
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                    </div>
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'main-menu',
+                        'container' => false,
+                        'menu_class' => 'navbar-nav ms-auto',
+                        'depth' => 2,
+                        'walker' => new WP_Bootstrap_Navwalker(), 
+                        'fallback_cb' => '__return_false'
+                    ));
+                    ?>
                 </div>
             </nav>
         </div>
         <!-- Navbar End -->
-
 
         <!-- Header Start -->
         <div class="container-fluid header bg-white p-0">
@@ -81,10 +65,10 @@
                 <div class="col-md-6 image-wrapper animated fadeIn position-relative">
                     <div class="owl-carousel header-carousel">
                         <div class="owl-carousel-item">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/assets/img/carousel-1.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel-1.jpg" alt="">
                         </div>
                         <div class="owl-carousel-item">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/assets/img/carousel-2.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel-2.jpg" alt="">
                         </div>
                     </div>
                 </div>

@@ -3,13 +3,38 @@
 Template Name: Blog Listing
 */
 wp_head();
-get_header();
+
 ?>
 
-<!-- Keep your HTML structure but replace static content with WordPress functions -->
 <div class="container-xxl bg-white p-0">
-    <!-- Navbar - Use WordPress menu system -->
-    <?php get_template_part('partials/navbar'); ?>
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand d-flex align-items-center text-center">
+                <div class="icon p-2 me-2">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="Icon" style="width: 30px; height: 30px;">
+                </div>
+                <h1 class="m-0 text-primary">WEManagement</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'main-menu',
+                    'container' => false,
+                    'menu_class' => 'navbar-nav ms-auto',
+                    'depth' => 2,
+                    'walker' => new WP_Bootstrap_Navwalker(),
+                    'fallback_cb' => '__return_false'
+                ));
+                ?>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
 
     <!-- Header Start -->
     <div class="container-fluid header bg-white p-0 position-relative">
@@ -75,7 +100,7 @@ get_header();
     <div class="container-xxl py-4">
         <div class="container">
             <div class="row mb-5">
-                
+
                 <div class="col-12">
                     <div class="search-widget wow fadeInUp" data-wow-delay="0.1s">
                         <form class="search-form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
@@ -239,6 +264,6 @@ get_header();
     <!-- Footer -->
     <?php
     get_footer();
-    wp_footer()
+    wp_footer();
     ?>
 </div>

@@ -130,31 +130,54 @@ function wemanagement_get_post_views($postID)
 }
 
 // === Function to count post views ===
-function wemanagement_set_post_views($postID)
-{
-    $count_key = 'post_views_count';
+// Track post views
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
     $count = get_post_meta($postID, $count_key, true);
-    if ($count == '') {
+    if($count==''){
         $count = 0;
         delete_post_meta($postID, $count_key);
         add_post_meta($postID, $count_key, '0');
-    } else {
+    }else{
         $count++;
         update_post_meta($postID, $count_key, $count);
     }
 }
 
-// === Track post views ===
-function wemanagement_track_post_views($post_id)
-{
-    if (!is_single()) return;
-    if (empty($post_id)) {
-        global $post;
-        $post_id = $post->ID;
+// Get post views
+function wpb_get_post_views($postID){
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0";
     }
-    wemanagement_set_post_views($post_id);
+    return $count;
 }
-add_action('wp_head', 'wemanagement_track_post_views');
+
+
+// Initialize Owl Carousel
+function we_management_owl_carousel() {
+    ?>
+    <script>
+    jQuery(document).ready(function($) {
+        $('.header-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            smartSpeed: 1500,
+            dots: false,
+            nav: false,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn'
+        });
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'we_management_owl_carousel');
 
 function custom_comment_format($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
@@ -185,6 +208,33 @@ function custom_comment_format($comment, $args, $depth) {
     </div>
 <?php }
 
+
+function wemanagement_set_post_views($postID)
+{
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if ($count == '') {
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    } else {
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+// === Track post views ===
+function wemanagement_track_post_views($post_id)
+{
+    if (!is_single()) return;
+    if (empty($post_id)) {
+        global $post;
+        $post_id = $post->ID;
+    }
+    wemanagement_set_post_views($post_id);
+}
+add_action('wp_head', 'wemanagement_track_post_views');
+
 // Kirki Customer
 require get_template_directory() . "/includes/customiser.php";
 add_theme_support('customize-selective-refresh-widgets');
@@ -193,10 +243,8 @@ add_theme_support('customize-selective-refresh-widgets');
 
 require_once get_template_directory() . '/includes/class-wp-bootstrap-navwalker.php';
 
-// Register menu locations
-function wmg_register_menus() {
-    register_nav_menus([
-        'primary' => __('Primary Menu', 'wmg'),
-    ]);
+// === Register menu locations ===
+function register_my_menus() {
+    register_nav_menu('main-menu', __('Main Menu'));
 }
-add_action('after_setup_theme', 'wmg_register_menus');
+add_action('after_setup_theme', 'register_my_menus');

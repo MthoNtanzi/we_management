@@ -21,8 +21,7 @@
 
     <!-- CSS -->
     <?php
-        wp_head();
-        get_header();
+    wp_head();
     ?>
 
 </head>
@@ -32,8 +31,33 @@
         <!-- Spinner -->
         <?php get_template_part('partials/spinner'); ?>
 
-        <!-- Navbar -->
-        <?php get_template_part('partials/navbar'); ?>
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">WEManagement</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'main-menu',
+                        'container' => false,
+                        'menu_class' => 'navbar-nav ms-auto',
+                        'depth' => 2,
+                        'walker' => new WP_Bootstrap_Navwalker(), 
+                        'fallback_cb' => '__return_false'
+                    ));
+                    ?>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
 
         <!-- Header Start -->
         <div class="container-fluid header bg-white p-0 position-relative">
@@ -41,7 +65,7 @@
                 <div class="col-md-6 p-5 mt-lg-5 text-wrapper">
                     <h1 class="display-5 animated fadeIn mb-4" style="margin-top: 35px;">
                         Blo<span class="text-primary">g</span>
-                    </h1>  
+                    </h1>
                     <nav aria-label="breadcrumb" class="animated fadeIn">
                         <ol class="breadcrumb mb-0 bg-transparent p-0">
                             <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>" class="text-decoration-none">Home</a></li>
@@ -75,7 +99,7 @@
             <div class="container">
                 <div class="row g-5">
                     <!-- Main Content -->
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <?php while (have_posts()) : the_post(); ?>
                             <!-- Blog Post -->
                             <div class="blog-post wow fadeInUp" data-wow-delay="0.1s">
@@ -112,28 +136,33 @@
                             </div>
 
                             <!-- Author Box -->
-                            <div class="blog-post-author wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="blog-post-author-img">
-                                    <?php echo get_avatar(get_the_author_meta('ID'), 100); ?>
+                            <div class="blog-post-author row justify-content-center text-center text-md-start wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="col-12 col-md-auto mb-3 mb-md-0">
+                                    <div class="blog-post-author-img mx-auto">
+                                        <?php echo get_avatar(get_the_author_meta('ID'), 100); ?>
+                                    </div>
                                 </div>
-                                <div class="blog-post-author-info">
-                                    <h4><?php the_author(); ?></h4>
-                                    <p><?php echo get_the_author_meta('description'); ?></p>
-                                    <div class="blog-post-author-social">
-                                        <?php
-                                        $author_facebook = get_the_author_meta('facebook');
-                                        $author_twitter = get_the_author_meta('twitter');
-                                        $author_linkedin = get_the_author_meta('linkedin');
-                                        $author_instagram = get_the_author_meta('instagram');
+                                <div class="col-12 col-md">
+                                    <div class="blog-post-author-info">
+                                        <h4><?php the_author(); ?></h4>
+                                        <p><?php echo get_the_author_meta('description'); ?></p>
+                                        <div class="blog-post-author-social">
+                                            <?php
+                                            $author_facebook = get_the_author_meta('facebook');
+                                            $author_twitter = get_the_author_meta('twitter');
+                                            $author_linkedin = get_the_author_meta('linkedin');
+                                            $author_instagram = get_the_author_meta('instagram');
 
-                                        if ($author_facebook) echo '<a href="' . esc_url($author_facebook) . '"><i class="fab fa-facebook-f"></i></a>';
-                                        if ($author_twitter) echo '<a href="' . esc_url($author_twitter) . '"><i class="fab fa-twitter"></i></a>';
-                                        if ($author_linkedin) echo '<a href="' . esc_url($author_linkedin) . '"><i class="fab fa-linkedin-in"></i></a>';
-                                        if ($author_instagram) echo '<a href="' . esc_url($author_instagram) . '"><i class="fab fa-instagram"></i></a>';
-                                        ?>
+                                            if ($author_facebook) echo '<a href="' . esc_url($author_facebook) . '"><i class="fab fa-facebook-f"></i></a>';
+                                            if ($author_twitter) echo '<a href="' . esc_url($author_twitter) . '"><i class="fab fa-twitter"></i></a>';
+                                            if ($author_linkedin) echo '<a href="' . esc_url($author_linkedin) . '"><i class="fab fa-linkedin-in"></i></a>';
+                                            if ($author_instagram) echo '<a href="' . esc_url($author_instagram) . '"><i class="fab fa-instagram"></i></a>';
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
 
                             <!-- Comments Section -->
                             <?php comments_template(); ?>
@@ -142,45 +171,13 @@
                     </div>
 
                     <!-- Sidebar -->
-                    <div class="col-lg-4">
-                        <?php get_sidebar(); ?>
-                    </div>
+
+                    <?php get_sidebar(); ?>
+
                 </div>
 
                 <!-- Related Posts -->
-                <div class="blog-related wow fadeInUp" data-wow-delay="0.1s">
-                    <h3>Related Posts</h3>
-                    <div class="row g-4">
-                        <?php
-                        $related = get_posts(
-                            array(
-                                'category__in' => wp_get_post_categories(get_the_ID()),
-                                'numberposts' => 3,
-                                'post__not_in' => array(get_the_ID())
-                            )
-                        );
 
-                        if ($related) {
-                            foreach ($related as $post) {
-                                setup_postdata($post); ?>
-                                <div class="col-md-4">
-                                    <div class="blog-related-item">
-                                        <div class="blog-related-img">
-                                            <?php if (has_post_thumbnail()): ?>
-                                                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium', ['alt' => get_the_title()]); ?></a>
-                                            <?php else: ?>
-                                                <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/blog_img/post<?php echo rand(1, 6); ?>.jpg" alt="<?php the_title(); ?>"></a>
-                                            <?php endif; ?>
-                                        </div>
-                                        <h4 class="blog-related-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                                        <div class="blog-related-date"><?php echo get_the_date(); ?></div>
-                                    </div>
-                                </div>
-                        <?php }
-                            wp_reset_postdata();
-                        } ?>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- Blog Post End -->
