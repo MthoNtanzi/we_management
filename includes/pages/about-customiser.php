@@ -221,3 +221,21 @@ new \Kirki\Field\URL(
         ]
     ]
 );
+
+new \Kirki\Field\Image(
+    [
+        'settings' => 'founder_image',
+        'label'    => esc_html__( 'Founder Image', 'kirki' ),
+        'section'  => 'about_founder',
+        'default'  => get_template_directory_uri() . '/assets/img/jessica.jpg',
+        'transport' => 'postMessage',
+        'partial_refresh' => [
+            'founder_image' => [
+                'selector' => '#founder-image',
+                'render_callback' => function() {
+                    return get_theme_mod('founder_image');
+                }
+            ]
+        ]
+    ]
+);

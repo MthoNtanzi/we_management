@@ -70,7 +70,7 @@
     <div class="container">
         <div class="founder-section d-flex flex-md-row flex-column">
             <div class="col-md-5">
-                <img src="<?php echo esc_url(get_theme_mod('founder_image', get_template_directory_uri() . '/assets/img/jessica.jpg')); ?>"
+                <img id="founder-image" src="<?php echo esc_url(get_theme_mod('founder_image', get_template_directory_uri() . '/assets/img/jessica.jpg')); ?>"
                     alt="Founder"
                     class="founder-image w-100 h-100">
             </div>
