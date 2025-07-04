@@ -217,31 +217,35 @@ function custom_comment_format($comment, $args, $depth) {
 <?php }
 
 
-function wemanagement_set_post_views($postID)
-{
+function wemanagement_set_post_views($postID) {
     $count_key = 'post_views_count';
     $count = get_post_meta($postID, $count_key, true);
-    if ($count == '') {
+
+    if ($count === '') {
         $count = 0;
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
+        add_post_meta($postID, $count_key, 1);
     } else {
         $count++;
         update_post_meta($postID, $count_key, $count);
     }
 }
 
-// === Track post views ===
-function wemanagement_track_post_views($post_id)
-{
+function wemanagement_track_post_views() {
     if (!is_single()) return;
-    if (empty($post_id)) {
-        global $post;
-        $post_id = $post->ID;
+
+    global $post;
+    if (!isset($post->ID)) return;
+
+    // Optional: Only count if not already counted in this session
+    if (empty($_SESSION)) session_start();
+    $key = 'viewed_' . $post->ID;
+
+    if (!isset($_SESSION[$key])) {
+        wemanagement_set_post_views($post->ID);
+        $_SESSION[$key] = true;
     }
-    wemanagement_set_post_views($post_id);
 }
-add_action('wp_head', 'wemanagement_track_post_views');
+add_action('template_redirect', 'wemanagement_track_post_views');
 
 // Kirki Customer
 require get_template_directory() . "/includes/customiser.php";
