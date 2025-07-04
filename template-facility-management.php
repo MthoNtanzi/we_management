@@ -14,6 +14,8 @@
      get_template_part('template-parts/home/section', "cta2");
 ?> 
 
+</div>
+
 <?php 
     get_footer(); 
     wp_footer();

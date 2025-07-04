@@ -166,6 +166,12 @@ $why_items = [
     'personalized_service' => 'Personalized Service',
 ];
 
+$why_defaults = [
+    'licensed_brokers'     => 'Our team is certified with deep industry connections.',
+    'market_insights'      => 'We leverage data to secure the best deals.',
+    'personalized_service' => 'Trust, Integrity and invest/wealth/profit.',
+];
+
 foreach ( $why_items as $key => $label ) {
     Kirki::add_field( 'your_theme_config_id', [
         'type'        => 'text',
@@ -189,7 +195,7 @@ foreach ( $why_items as $key => $label ) {
         'settings'    => "brokerage_why_{$key}_desc",
         'label'       => esc_html__( "$label - Description", 'kirki' ),
         'section'     => 'brokerage_why_us_section',
-        'default'     => '',
+        'default'     => $why_defaults[$key],
         'transport'   => 'postMessage',
         'partial_refresh' => [
             "brokerage_why_{$key}_desc" => [

@@ -252,6 +252,9 @@ require get_template_directory() . "/includes/customiser.php";
 require get_template_directory() . "/includes/pages/about-customiser.php";
 require get_template_directory()."/includes/pages/services-customiser.php";
 require get_template_directory() . '/includes/pages/brokerage-customiser.php';
+require get_template_directory() . '/includes/pages/contact-customiser.php';
+require get_template_directory() . '/includes/pages/facility-management-customiser.php';
+
 add_theme_support('customize-selective-refresh-widgets');
 
 require_once get_template_directory() . '/includes/class-wp-bootstrap-navwalker.php';

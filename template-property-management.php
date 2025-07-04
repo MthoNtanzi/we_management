@@ -7,7 +7,7 @@
 ?>
 
 <?php
-     get_template_part('template-parts/property-management/section-property-management-content');
+     get_template_part('template-parts/property-management/section', 'content');
 ?>
 
 <?php
