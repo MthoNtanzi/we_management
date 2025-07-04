@@ -104,7 +104,7 @@ new \Kirki\Field\Textarea(
         'settings' => 'our_approach_paragraph',
         'label'    => esc_html__( 'Intro Paragraph', 'kirki' ),
         'section'  => 'about_our_approach',
-        'default'  => 'We take a collaborative and personalized approach...',
+        'default'  => 'We take a collaborative and personalized approach to property management. As a boutique firm, we prioritize understanding your unique objectives and tailoring solutions to meet your specific needs. Our focus is on delivering efficient, results-driven strategies designed to maximize the value of your assets. With a clear sense of purpose and partnership, we work closely with you to achieve your property goals and drive long-term success.',
         'transport' => 'postMessage',
         'partial_refresh' => [
             'our_approach_paragraph' => [
@@ -173,7 +173,7 @@ new \Kirki\Field\Textarea(
         'settings' => 'founder_bio',
         'label'    => esc_html__( 'Founder Bio', 'kirki' ),
         'section'  => 'about_founder',
-        'default'  => 'With over 15 years of experience...',
+        'default'  => 'With over 15 years of experience in real estate and property management, Jessica founded WEManagement with a vision to revolutionize the industry through technology and exceptional service.',
         'transport' => 'postMessage',
         'partial_refresh' => [
             'founder_bio' => [
@@ -191,7 +191,7 @@ new \Kirki\Field\Textarea(
         'settings' => 'founder_quote',
         'label'    => esc_html__( 'Founder Quote', 'kirki' ),
         'section'  => 'about_founder',
-        'default'  => '"Our success comes from treating every property..."',
+        'default'  => '"Our success comes from treating every property as if it were our own and every tenant as a valued member of our community. This philosophy has guided us from day one."',
         'transport' => 'postMessage',
         'partial_refresh' => [
             'founder_quote' => [
