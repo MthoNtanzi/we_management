@@ -27,7 +27,7 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/contact'); ?>">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/blog'); ?>">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/our-blog'); ?>">Blog</a></li>
             </ul>
         </div>
     </div>
