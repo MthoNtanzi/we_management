@@ -7,7 +7,7 @@
                         <p class="mb-0">Join hundreds of property owners who trust us with their investments.</p>
                     </div>
                     <div class="col-lg-4">
-                        <a class="btn btn-dark py-3 px-5 w-100 w-lg-auto" href="">Get Started Today</a>
+                        <a class="btn btn-dark py-3 px-5 w-100 w-lg-auto" href="<?php echo home_url('contact'); ?>">Get Started Today</a>
                     </div>
                 </div>
             </div>

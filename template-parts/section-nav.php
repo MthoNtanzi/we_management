@@ -5,7 +5,7 @@
                 <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="WE Management Logo" style="width: 50px; height: 50px;">
 
             </div>
-            <h1 class="m-0 text-white">WE Management</h1>
+            <h1 class="m-0 text-white">W.E. Management</h1>
         </a>
         <button class="navbar-toggler custom-toggler-new" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarResponsiveNew" id="navdropdown">

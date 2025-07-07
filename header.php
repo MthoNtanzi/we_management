@@ -19,8 +19,8 @@
             </p>
 
             <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="services.html" class="btn btn-secondary btn-lg px-4 py-3">Explore Our Services</a>
-                <a href="contact.html" class="btn btn-outline-light btn-lg px-4 py-3">Get in Touch</a>
+                <a href="<?php echo home_url('/services'); ?>" class="btn btn-secondary btn-lg px-4 py-3">Explore Our Services</a>
+                <a href="<?php echo home_url('contact'); ?>" class="btn btn-outline-light btn-lg px-4 py-3">Get in Touch</a>
             </div>
         </div>
 

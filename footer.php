@@ -41,7 +41,7 @@
                 <a class="btn btn-link text-white-50" href="<?php echo home_url('/about'); ?>">About Us</a>
                 <a class="btn btn-link text-white-50" href="<?php echo home_url('/contact'); ?>">Contact Us</a>
                 <a class="btn btn-link text-white-50" href="<?php echo home_url('/services'); ?>">Our Services</a>
-                <a class="btn btn-link text-white-50" href="<?php echo home_url('/blog'); ?>">Our Blog</a>
+                <a class="btn btn-link text-white-50" href="<?php echo home_url('/our-blog'); ?>">Our Blog</a>
             </div>
 
             <!-- Business Hours -->
@@ -71,7 +71,7 @@
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
                         <a href="<?php echo home_url(); ?>">Home</a>
-                        <a href="#">FAQs</a>
+                        <a href="<?php echo home_url('/#faq'); ?>">FAQs</a>
                     </div>
                 </div>
             </div>

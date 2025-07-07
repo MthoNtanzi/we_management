@@ -1,5 +1,5 @@
 <!-- Frequently Asked Questions -->
-<div class="container-xxl py-5 bg-light">
+<div class="container-xxl py-5 bg-light" id="faq">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
             <h1 class="mb-3">Frequently Asked Questions</h1>
