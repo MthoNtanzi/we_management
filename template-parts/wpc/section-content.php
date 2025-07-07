@@ -3,71 +3,75 @@
 
     <div class="justify-content-center g-5 text-center py-5">
         <div class="col-md-6 mx-auto">
-            <h1 class="mb-4 text-primary"> What Is WE Property Care?</h1>
-            <p class="text-muted">
-                An education platform empowering businesses to proactively spot, report, and manage maintenance
-                issues early.
+            <h1 class="mb-4 text-primary" id="wecare_heading">
+                <?php echo esc_html( get_theme_mod( 'wecare_heading', 'What Is WE Property Care?' ) ); ?>
+            </h1>
+            <p class="text-muted" id="wecare_paragraph_1">
+                <?php echo esc_html( get_theme_mod( 'wecare_paragraph_1', 'An education platform empowering businesses to proactively spot, report, and manage maintenance issues early.' ) ); ?>
             </p>
-            <p>
-                Empowering businesses to protect their properties through education, preventive maintenance
-                programs, and ongoing expert support.
+            <p id="wecare_paragraph_2">
+                <?php echo esc_html( get_theme_mod( 'wecare_paragraph_2', 'Empowering businesses to protect their properties through education, preventive maintenance programs, and ongoing expert support.' ) ); ?>
             </p>
         </div>
     </div>
 
     <!-- Start of Service Packages -->
     <div class="justify-content-center g-5 text-center py-5">
-        <h1 class="mb-4 text-primary">Service Packages</h1>
+        <h1 class="mb-4 text-primary" id="wecare_packages_heading">
+            <?php echo esc_html( get_theme_mod( 'wecare_packages_heading', 'Service Packages' ) ); ?>
+        </h1>
         <div class="service_package_container">
-            <div class="service_package_box">
-                <h3 class="service_package_heading">ESSENTIALS PACKAGE:</h3>
-                <p class="text-primary">A one-time workshop and playbook to kickstart your maintenance strategy.
-                </p>
-                <p><strong>Inclusions: </strong>3-hour training workshop, 1 custom playbook with checklists.</p>
-            </div>
-            <div class="service_package_box">
-                <h3 class="service_package_heading"> PROACTIVE PARTNER PACKAGE:</h3>
-                <p class="text-primary"> Comprehensive support with training, audits, and a year-long
-                    subscription.
-                </p>
-                <p><strong>Inclusions: </strong>Training workshop, custom playbook, quarterly property health
-                    audits, 1-year WE Property Care™ Membership.</p>
-            </div>
-            <div class="service_package_box">
-                <h3 class="service_package_heading">FULL FACILITY CARE PACKAGE:</h3>
-                <p class="text-primary"> Our premium offering, including access to a future digital maintenance
-                    platform.</p>
-                <p><strong>Inclusions: </strong>All Proactive Partner features plus access to a maintenance
-                    management platform.</p>
-            </div>
+            <?php
+            $package_items = [
+                'essentials'       => 'ESSENTIALS PACKAGE:',
+                'proactive'        => 'PROACTIVE PARTNER PACKAGE:',
+                'full_facility'    => 'FULL FACILITY CARE PACKAGE:',
+            ];
+
+            foreach ( $package_items as $key => $default_heading ) : ?>
+                <div class="service_package_box">
+                    <h3 class="service_package_heading" id="wecare_package_<?php echo $key; ?>_heading">
+                        <?php echo esc_html( get_theme_mod( "wecare_package_{$key}_heading", $default_heading ) ); ?>
+                    </h3>
+                    <p class="text-primary" id="wecare_package_<?php echo $key; ?>_tagline">
+                        <?php echo esc_html( get_theme_mod( "wecare_package_{$key}_tagline" ) ); ?>
+                    </p>
+                    <p id="wecare_package_<?php echo $key; ?>_desc">
+                        <?php echo esc_html( get_theme_mod( "wecare_package_{$key}_desc" ) ); ?>
+                    </p>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
+
     <!-- End of Service Packages -->
 
     <!-- Start of why choose we property care -->
     <div class="justify-content-center g-5 text-center py-5">
-        <h1 class="mb-4 text-primary">Why Choose We Property Care?</h1>
+        <h1 class="mb-4 text-primary" id="wecare_why_heading">
+            <?php echo esc_html( get_theme_mod( 'wecare_why_heading', 'Why Choose We Property Care?' ) ); ?>
+        </h1>
         <div class="we_prop_care_container">
+            <?php
+            $why_items = [
+                'proactive'   => ['bi bi-gear-fill', 'Proactive Approach', 'Prevent costly repairs with early issue detection'],
+                'empowerment' => ['bi bi-journal-check', 'Empowerment', 'Train your team to manage maintenance confidently.'],
+                'scalable'    => ['bi bi-layers-fill', 'Scalable Support', 'From workshops to subscriptions, we grow with your needs.'],
+                'alignment'   => ['bi bi-shield-lock-fill', 'Alignment with Core Values', 'Reliability, transparency, and high-touch service.'],
+            ];
+
+            foreach ( $why_items as $key => $defaults ) :
+            ?>
             <div class="we_prop_care_grid_item">
-                <i class="bi bi-gear-fill"></i>
-                <h1>Proactive Approach:</h1>
-                <p>Prevent costly repairs with early issue detection</p>
+                <i class="<?php echo esc_attr( get_theme_mod( "wecare_why_{$key}_icon", $defaults[0] ) ); ?>"></i>
+                <h1 id="wecare_why_<?php echo $key; ?>_title">
+                    <?php echo esc_html( get_theme_mod( "wecare_why_{$key}_title", $defaults[1] ) ); ?>
+                </h1>
+                <p id="wecare_why_<?php echo $key; ?>_desc">
+                    <?php echo esc_html( get_theme_mod( "wecare_why_{$key}_desc", $defaults[2] ) ); ?>
+                </p>
             </div>
-            <div class="we_prop_care_grid_item">
-                <i class="bi bi-journal-check"></i>
-                <h1>Empowerment:</h1>
-                <p>Train your team to manage maintenance confidently.</p>
-            </div>
-            <div class="we_prop_care_grid_item">
-                <i class="bi bi-layers-fill"></i>
-                <h1>Scalable Support:</h1>
-                <p>From workshops to subscriptions, we grow with your needs.</p>
-            </div>
-            <div class="we_prop_care_grid_item">
-                <i class="bi bi-shield-lock-fill"></i>
-                <h1>Alignment with Core Values:</h1>
-                <p>Reliability, transparency, and high-touch service.</p>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <!-- End of why choose we property care -->
