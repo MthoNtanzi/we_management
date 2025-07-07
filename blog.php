@@ -142,10 +142,11 @@ Template Name: Blog Listing
                 // The main blog loop
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
-                    'post_type' => 'post',
+                    'post_type' => array('post', 'blog'), 
                     'posts_per_page' => get_option('posts_per_page'),
                     'paged' => $paged
                 );
+
 
                 $query = new WP_Query($args);
 
@@ -284,11 +285,11 @@ Template Name: Blog Listing
             </div>
         </div>
         <!-- Blog End -->
-    
-    <!-- Footer -->
-    <?php
-    get_footer();
-    ?>
+
+        <!-- Footer -->
+        <?php
+        get_footer();
+        ?>
 
     </div>
 
@@ -296,4 +297,5 @@ Template Name: Blog Listing
     wp_footer();
     ?>
 </body>
+
 </html>
