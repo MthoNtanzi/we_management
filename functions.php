@@ -254,6 +254,8 @@ require get_template_directory()."/includes/pages/services-customiser.php";
 require get_template_directory() . '/includes/pages/brokerage-customiser.php';
 require get_template_directory() . '/includes/pages/contact-customiser.php';
 require get_template_directory() . '/includes/pages/facility-management-customiser.php';
+require get_template_directory() . '/includes/pages/property-management-customiser.php';
+
 
 add_theme_support('customize-selective-refresh-widgets');
 
