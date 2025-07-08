@@ -18,7 +18,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="<?php echo home_url('/services'); ?>" id="servicesDropdown">Services</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="property-management.html">Property Management</a>
+                        <li><a class="dropdown-item" href="/property-management">Property Management</a>
                         </li>
                         <li><a class="dropdown-item" href="/brokerage">Brokerage</a></li>
                         <li><a class="dropdown-item" href="/facility-management">Facility Management</a>
