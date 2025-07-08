@@ -62,20 +62,40 @@
     <!-- Right consultation block -->
     <!-- Vendor Sourcing -->
     <?php
-    $consult_blocks = [ 'vendor_sourcing', 'maintenance_planning', 'invoice_coordination', 'project_support' ];
+$consult_blocks = [
+    'vendor_sourcing' => [
+        'title' => 'VENDOR SOURCING',
+        'desc'  => "Find and vet vendors for your locations' maintenance needs.",
+    ],
+    'maintenance_planning' => [
+        'title' => 'MAINTENANCE PLANNING',
+        'desc'  => 'Develop a maintenance schedule for your properties.',
+    ],
+    'invoice_coordination' => [
+        'title' => 'INVOICE COORDINATION',
+        'desc'  => 'Set up invoice processing for multiple locations',
+    ],
+    'project_support' => [
+        'title' => 'PROJECT SUPPORT',
+        'desc'  => "Find and vet vendors for your locations' maintenance needs.",
+    ],
+];
 
-    foreach ( $consult_blocks as $key ) :
+foreach ( $consult_blocks as $key => $block ) :
+    $title = get_theme_mod( "facility_consult_{$key}_title", $block['title'] );
+    $desc  = get_theme_mod( "facility_consult_{$key}_desc", $block['desc'] );
     ?>
-        <div class="individual_consutling_blocks">
-            <h5 id="facility-consult-<?php echo $key; ?>-title">
-                <?php echo esc_html( get_theme_mod( "facility_consult_{$key}_title", '' ) ); ?>
-            </h5>
-            <p id="facility-consult-<?php echo $key; ?>-desc">
-                <?php echo esc_html( get_theme_mod( "facility_consult_{$key}_desc", '' ) ); ?>
-            </p>
-        </div>
-    <?php endforeach; ?>
+    <div class="individual_consutling_blocks">
+        <h5 id="facility-consult-<?php echo esc_attr($key); ?>-title">
+            <?php echo esc_html( $title ); ?>
+        </h5>
+        <p id="facility-consult-<?php echo esc_attr($key); ?>-desc">
+            <?php echo esc_html( $desc ); ?>
+        </p>
+    </div>
+<?php endforeach; ?>
 
     <!-- End of right block -->
 </div>
 <!-- End of Consultations -->
+</div>
