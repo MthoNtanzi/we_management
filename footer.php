@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     &copy; <a class="border-bottom" href="#">
-                        <?php echo wp_kses_post(get_theme_mod('footer_company_name', 'WE Management')); ?>
+                        <?php echo wp_kses_post(get_theme_mod('footer_company_name', 'W.E. Management')); ?>
                     </a>, All Rights Reserved.
                     Designed By
                     <a class="border-bottom" href="<?php echo esc_url(get_theme_mod('footer_designer_link', 'https://talentmatchafrica.com')); ?>" target="_blank">
