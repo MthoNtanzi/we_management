@@ -53,24 +53,27 @@
         </h1>
         <div class="we_prop_care_container">
             <?php
-            $why_items = [
-                'proactive'   => ['bi bi-gear-fill', 'Proactive Approach', 'Prevent costly repairs with early issue detection'],
-                'empowerment' => ['bi bi-journal-check', 'Empowerment', 'Train your team to manage maintenance confidently.'],
-                'scalable'    => ['bi bi-layers-fill', 'Scalable Support', 'From workshops to subscriptions, we grow with your needs.'],
-                'alignment'   => ['bi bi-shield-lock-fill', 'Alignment with Core Values', 'Reliability, transparency, and high-touch service.'],
-            ];
+                $why_items = [
+                    'proactive'   => ['bi bi-gear-fill', 'Proactive Approach', 'Prevent costly repairs with early issue detection'],
+                    'empowerment' => ['bi bi-journal-check', 'Empowerment', 'Train your team to manage maintenance confidently.'],
+                    'scalable'    => ['bi bi-layers-fill', 'Scalable Support', 'From workshops to subscriptions, we grow with your needs.'],
+                    'alignment'   => ['bi bi-shield-lock-fill', 'Alignment with Core Values', 'Reliability, transparency, and high-touch service.'],
+                ];
 
             foreach ( $why_items as $key => $defaults ) :
-            ?>
-            <div class="we_prop_care_grid_item">
-                <i class="<?php echo esc_attr( get_theme_mod( "wecare_why_{$key}_icon", $defaults[0] ) ); ?>"></i>
-                <h1 id="wecare_why_<?php echo $key; ?>_title">
-                    <?php echo esc_html( get_theme_mod( "wecare_why_{$key}_title", $defaults[1] ) ); ?>
-                </h1>
-                <p id="wecare_why_<?php echo $key; ?>_desc">
-                    <?php echo esc_html( get_theme_mod( "wecare_why_{$key}_desc", $defaults[2] ) ); ?>
-                </p>
-            </div>
+                $icon  = get_theme_mod( "wecare_why_{$key}_icon", $defaults[0] );
+                $title = get_theme_mod( "wecare_why_{$key}_title", $defaults[1] );
+                $desc  = get_theme_mod( "wecare_why_{$key}_desc", $defaults[2] );
+                ?>
+                <div class="we_prop_care_grid_item">
+                    <i class="<?php echo esc_attr( $icon ); ?>"></i>
+                    <h1 id="wecare_why_<?php echo esc_attr($key); ?>_title">
+                        <?php echo esc_html( $title ); ?>
+                    </h1>
+                    <p id="wecare_why_<?php echo esc_attr($key); ?>_desc">
+                        <?php echo esc_html( $desc ); ?>
+                    </p>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>
