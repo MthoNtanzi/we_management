@@ -58,10 +58,10 @@ foreach ( $services as $key => $service ) :
         $img = get_template_directory_uri() . $service['default_img'];
     }
     ?>
-    <div class="service_block" id="service-<?php echo esc_attr( $key ); ?>">
+    <div class="col-md-4" id="service-<?php echo esc_attr( $key ); ?>">
         <h3><?php echo esc_html( $title ); ?></h3>
         <p><?php echo esc_html( $desc ); ?></p>
-        <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( $title ); ?>" class="img-fluid">
+        <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( $title ); ?>" class="img-fluid rounded mb-3">
     </div>
 <?php endforeach; ?>
 
