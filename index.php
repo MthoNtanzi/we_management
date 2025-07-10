@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
     <title>We Management Group - Commercial Property Management & Leasing</title>
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" rel="icon">
 
     <!-- CSS -->
     <?php

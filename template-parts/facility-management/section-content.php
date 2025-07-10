@@ -23,26 +23,47 @@
     <div class="row text-center g-4">
 
         <?php
-        $offers = [
-            'vendor_coordination' => 'mechanic.jpg',
-            'maintenance_oversight' => 'maintanamce.jpg',
-            'invoice_processing' => 'invoice_2.jpg',
-        ];
+$services = [
+    'vendor_coordination' => [
+        'label'        => 'Vendor Coordination',
+        'default_desc' => 'We vet and manage vendors for landscaping, roofing, HVAC, and more, ensuring quality and cost-efficiency.',
+        'default_img'  => '/assets/img/fm_services/vendor_coordination/mechanic.jpg',
+    ],
+    'maintenance_oversight' => [
+        'label'        => 'Maintenance Oversight',
+        'default_desc' => 'Coordinate routine and emergency maintenance, responding quickly to tenant or owner needs.',
+        'default_img'  => '/assets/img/fm_services/maintenance_oversight/maintanamce.jpg',
+    ],
+    'invoice_processing' => [
+        'label'        => 'Invoice Processing',
+        'default_desc' => 'Process vendor invoices and liaise with your accountant for seamless financial tracking.',
+        'default_img'  => '/assets/img/fm_services/invoice_processing/invoice_2.jpg',
+    ],
+];
 
-        foreach ( $offers as $key => $image ) :
-        ?>
-            <div class="col-md-4">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fm_services/<?php echo $key; ?>/<?php echo $image; ?>" 
-                     alt="<?php echo esc_attr( get_theme_mod("facility_offer_{$key}_title", '') ); ?>" 
-                     class="img-fluid rounded mb-3">
-                <h3 id="facility-offer-<?php echo $key; ?>-title" class="text-primary">
-                    <?php echo esc_html( get_theme_mod("facility_offer_{$key}_title", '') ); ?>
-                </h3>
-                <p id="facility-offer-<?php echo $key; ?>-desc">
-                    <?php echo esc_html( get_theme_mod("facility_offer_{$key}_desc", '') ); ?>
-                </p>
-            </div>
-        <?php endforeach; ?>
+foreach ( $services as $key => $service ) :
+    $title = get_theme_mod( "service_{$key}_title" );
+    $desc  = get_theme_mod( "service_{$key}_desc" );
+    $img   = get_theme_mod( "service_{$key}_image" );
+
+    if ( empty( $title ) ) {
+        $title = $service['label'];
+    }
+
+    if ( empty( $desc ) ) {
+        $desc = $service['default_desc'];
+    }
+
+    if ( empty( $img ) ) {
+        $img = get_template_directory_uri() . $service['default_img'];
+    }
+    ?>
+    <div class="col-md-4" id="service-<?php echo esc_attr( $key ); ?>">
+        <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( $title ); ?>" class="img-fluid mb-3">    
+        <h3><?php echo esc_html( $title ); ?></h3>
+        <p><?php echo esc_html( $desc ); ?></p>
+    </div>
+<?php endforeach; ?>
 
     </div>
 <!-- end of offer -->
@@ -62,20 +83,48 @@
     <!-- Right consultation block -->
     <!-- Vendor Sourcing -->
     <?php
-    $consult_blocks = [ 'vendor_sourcing', 'maintenance_planning', 'invoice_coordination', 'project_support' ];
+        $consult_blocks = [
+            'vendor_sourcing' => [
+                'title' => 'VENDOR SOURCING',
+                'desc'  => "Find and vet vendors for your locations' maintenance needs.",
+            ],
+            'maintenance_planning' => [
+                'title' => 'MAINTENANCE PLANNING',
+                'desc'  => 'Develop a maintenance schedule for your properties.',
+            ],
+            'invoice_coordination' => [
+                'title' => 'INVOICE COORDINATION',
+                'desc'  => 'Set up invoice processing for multiple locations',
+            ],
+            'project_support' => [
+                'title' => 'PROJECT SUPPORT',
+                'desc'  => "Find and vet vendors for your locations' maintenance needs.",
+            ],
+        ];
 
-    foreach ( $consult_blocks as $key ) :
-    ?>
-        <div class="individual_consutling_blocks">
-            <h5 id="facility-consult-<?php echo $key; ?>-title">
-                <?php echo esc_html( get_theme_mod( "facility_consult_{$key}_title", '' ) ); ?>
-            </h5>
-            <p id="facility-consult-<?php echo $key; ?>-desc">
-                <?php echo esc_html( get_theme_mod( "facility_consult_{$key}_desc", '' ) ); ?>
-            </p>
-        </div>
-    <?php endforeach; ?>
+        foreach ( $consult_blocks as $key => $block ) :
+            $title = get_theme_mod( "facility_consult_{$key}_title" );
+            $desc  = get_theme_mod( "facility_consult_{$key}_desc" );
+
+            if ( empty( $title ) ) {
+                $title = $block['title'];
+            }
+            if ( empty( $desc ) ) {
+                $desc = $block['desc'];
+            }
+            ?>
+            <div class="individual_consutling_blocks">
+                <h5 id="facility-consult-<?php echo esc_attr($key); ?>-title">
+                    <?php echo esc_html( $title ); ?>
+                </h5>
+                <p id="facility-consult-<?php echo esc_attr($key); ?>-desc">
+                    <?php echo esc_html( $desc ); ?>
+                </p>
+            </div>
+<?php endforeach; ?>
+
 
     <!-- End of right block -->
 </div>
 <!-- End of Consultations -->
+</div>

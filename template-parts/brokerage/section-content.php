@@ -75,7 +75,7 @@
     <!-- Why Use Our Brokerage -->
     <div class="row justify-content-center g-5 mt-5">
         <div class="col-md-6 mx-auto bg-white p-4">
-            <h1 id="brokerage-why-heading" class="mb-4 text-primary">
+            <h1 id="brokerage-why-heading" class="mb-4 text-primary text-center">
                 <?php echo esc_html( get_theme_mod('brokerage_why_heading', 'Why Use Our Brokerage') ); ?>
             </h1>
             <ul class="list-unstyled text-start">

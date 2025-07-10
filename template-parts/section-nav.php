@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar-new" id="mainNavNew">
     <div class="container">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <div class="p-2 me-2">
+            <div class="p-2 me-1">
                 <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="WE Management Logo" style="width: 50px; height: 50px;">
 
             </div>
@@ -18,7 +18,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="<?php echo home_url('/services'); ?>" id="servicesDropdown">Services</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="property-management.html">Property Management</a>
+                        <li><a class="dropdown-item" href="/property-management">Property Management</a>
                         </li>
                         <li><a class="dropdown-item" href="/brokerage">Brokerage</a></li>
                         <li><a class="dropdown-item" href="/facility-management">Facility Management</a>
