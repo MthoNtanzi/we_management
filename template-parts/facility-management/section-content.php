@@ -59,9 +59,9 @@ foreach ( $services as $key => $service ) :
     }
     ?>
     <div class="col-md-4" id="service-<?php echo esc_attr( $key ); ?>">
+        <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( $title ); ?>" class="img-fluid mb-3">    
         <h3><?php echo esc_html( $title ); ?></h3>
         <p><?php echo esc_html( $desc ); ?></p>
-        <img src="<?php echo esc_url( $img ); ?>" alt="<?php echo esc_attr( $title ); ?>" class="img-fluid rounded mb-3">
     </div>
 <?php endforeach; ?>
 
