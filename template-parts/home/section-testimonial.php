@@ -23,7 +23,7 @@ if (empty($testimonials)) {
             'image'   => get_template_directory_uri() . '/assets/img/testimonial.png',
         ],
         [
-            'message' => 'Jessica is an outstanding property manager. Her attention to detail, clear communication, and ability to handle both tenants and property needs with ease make her a true asset in this industry. I\'ve worked with many property managers, and Jessica stands out as one of the best. Highly recommend W.E. Management Group!',
+            'message' => 'Jessica’s attention to detail and clear communication make her one of the best property managers. Highly recommend W.E. Management Group!',
             'name'    => 'Fatherzup World',
             'role'    => 'Client',
             'image'   => get_template_directory_uri() . '/assets/img/testimonial.png',

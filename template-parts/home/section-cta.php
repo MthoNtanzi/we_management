@@ -16,18 +16,20 @@
                                 <?php echo wp_kses_post(get_theme_mod('cta_text', 'Have questions or need help finding the right property? Our experienced real estate professional is here to assist you with expert guidance, whether you\'re leasing, buying, or listing your property.')); ?>
                             </p>
                         </div>
-                        <a href="tel:<?php echo esc_attr(get_theme_mod('cta_phone', '786-906-2928')); ?>" class="btn btn-primary py-3 px-4 me-2 cta-phone">
-                            <i class="fa fa-phone-alt me-2"></i>
-                            <span class="cta-call-button">
-                                <?php echo wp_kses_post(get_theme_mod('cta_call_button', 'Make A Call')); ?>
-                            </span>
-                        </a>
-                        <a href="<?php echo esc_url(get_theme_mod('cta_appointment_link', './contact.html')); ?>" class="btn btn-dark py-3 px-4 cta-appointment-link">
-                            <i class="fa fa-calendar-alt me-2"></i>
-                            <span class="cta-appointment-button">
-                                <?php echo wp_kses_post(get_theme_mod('cta_appointment_button', 'Get Appointment')); ?>
-                            </span>
-                        </a>
+                        <div class="call_to_action_btns">
+                            <a href="tel:<?php echo esc_attr(get_theme_mod('cta_phone', '786-906-2928')); ?>" class="btn btn-primary py-3 px-4 mx-1 cta-phone">
+                                <i class="fa fa-phone-alt me-2"></i>
+                                <span class="cta-call-button">
+                                    <?php echo wp_kses_post(get_theme_mod('cta_call_button', 'Make A Call')); ?>
+                                </span>
+                            </a>
+                            <a href="<?php echo esc_url(get_theme_mod('cta_appointment_link', './contact.html')); ?>" class="btn btn-dark py-3 px-4 mx-1 cta-appointment-link">
+                                <i class="fa fa-calendar-alt me-2"></i>
+                                <span class="cta-appointment-button">
+                                    <?php echo wp_kses_post(get_theme_mod('cta_appointment_button', 'Get Appointment')); ?>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
