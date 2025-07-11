@@ -12,9 +12,7 @@ Template Name: Blog Listing
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog Post</title>
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <title>Our Blog</title>
 
     <!-- Favicon -->
     <link href="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" rel="icon">
