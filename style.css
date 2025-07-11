@@ -131,9 +131,22 @@ html{
     color: var(--primary);
 }
 
+#mainNavNew .navbar-brand h1{
+        font-size: 2rem;
+    }
+
+#defaultNav .navbar-brand h1{
+        font-size: 2rem;
+    }
+
+
+
 
 
 @media (max-width: 991.98px) {
+    .navbar-brand h1 {
+        font-size: 20px;
+    }
     .nav-bar {
         margin: 0;
         padding: 0;
@@ -1601,6 +1614,17 @@ hr {
 }
 
 @media (max-width: 576px) {
+    #group_hidden{
+        display: none;
+    }
+
+    #mainNavNew .navbar-brand h1{
+        font-size: 20px;
+    }
+    #defaultNav .navbar-brand h1{
+        font-size: 20px;
+    }
+
     .hero-content h1 {
         font-size: 32px !important;
     }

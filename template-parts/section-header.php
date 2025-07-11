@@ -21,12 +21,12 @@
 
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4" id="defaultNav">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand d-flex align-items-center text-center">
                     <div class="p-2 me-2">
                         <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.jpg" alt="Icon" style="width: 50px; height: 50px;">
                     </div>
-                    <h1 class="m-0 text-primary">W.E. Management</h1>
+                    <h1 class="m-0 text-primary">W.E. Management<span id="group_hidden"> Group</span></h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
