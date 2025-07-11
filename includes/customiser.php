@@ -304,6 +304,67 @@ new \Kirki\Field\Text([
     ]
 ]);
 
+// Call to Action Section 2:
+new \Kirki\Section(
+    'call_to_action_section_2',
+    [
+        'title'       => esc_html__( 'Call to Action 2', 'kirki' ),
+        'description' => esc_html__( 'Customize the second Call to Action section', 'kirki' ),
+        'panel'       => 'wmg',
+        'priority'    => 175,
+    ]
+);
+
+// CTA 2 Heading
+new \Kirki\Field\Text([
+    'settings' => 'cta2_heading',
+    'label'    => esc_html__( 'CTA 2 Heading', 'kirki' ),
+    'section'  => 'call_to_action_section_2',
+    'default'  => esc_html__( 'Ready to Experience Stress-Free Property Management?', 'kirki' ),
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta2_heading' => [
+            'selector'        => '.cta2-heading',
+            'render_callback' => function() {
+                return get_theme_mod('cta2_heading');
+            }
+        ]
+    ]
+]);
+
+// CTA 2 Description
+new \Kirki\Field\Textarea([
+    'settings' => 'cta2_description',
+    'label'    => esc_html__( 'CTA 2 Description', 'kirki' ),
+    'section'  => 'call_to_action_section_2',
+    'default'  => esc_html__( 'Join hundreds of property owners who trust us with their investments.', 'kirki' ),
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta2_description' => [
+            'selector'        => '.cta2-description',
+            'render_callback' => function() {
+                return get_theme_mod('cta2_description');
+            }
+        ]
+    ]
+]);
+
+// CTA 2 Button Text
+new \Kirki\Field\Text([
+    'settings' => 'cta2_btn_text',
+    'label'    => esc_html__( 'CTA 2 Button Text', 'kirki' ),
+    'section'  => 'call_to_action_section_2',
+    'default'  => esc_html__( 'Get Started Today', 'kirki' ),
+    'transport' => 'postMessage',
+    'partial_refresh' => [
+        'cta2_btn_text' => [
+            'selector'        => '.cta2-btn-text',
+            'render_callback' => function() {
+                return get_theme_mod('cta2_btn_text');
+            }
+        ]
+    ]
+]);
 
 // FAQ Section:
 new \Kirki\Section(
