@@ -23,6 +23,7 @@
                                     <?php echo wp_kses_post(get_theme_mod('cta_call_button', 'Make A Call')); ?>
                                 </span>
                             </a>
+                            
                             <a href="<?php echo esc_url(get_theme_mod('cta_appointment_link', './contact.html')); ?>" class="btn btn-dark py-3 px-4 mx-1 cta-appointment-link">
                                 <i class="fa fa-calendar-alt me-2"></i>
                                 <span class="cta-appointment-button">
