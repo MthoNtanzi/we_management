@@ -17,7 +17,7 @@ $testimonials = get_theme_mod('testimonials_repeater');
 if (empty($testimonials)) {
     $testimonials = [
         [
-            'message' => 'Working with WE Management Group has been a game changer. Their attention to detail, communication, and commitment to excellence make them stand out in commercial real estate.',
+            'message' => 'W.E. Management Group stands out in commercial real estate with their attention to detail, strong communication, and commitment to excellence.',
             'name'    => 'Crystal Esparza',
             'role'    => 'Client',
             'image'   => get_template_directory_uri() . '/assets/img/testimonial.png',
